@@ -71,8 +71,10 @@ The following instructions apply to Linux and macOS. The same commands will work
 3. **Access via Browser:**
 
    Open a web browser and navigate to:
+
    ```
-   http://<host_IP>:6081/vnc_auto.html
+   http://localhost:6081/vnc_auto.html
+   
    ```
    Replace `<host_IP>` with your machine’s IP address or use `localhost` if running locally.
 
@@ -99,7 +101,7 @@ The following instructions apply to Linux and macOS. The same commands will work
 
    Open a browser and go to:
    ```
-   http://<host_IP>:6082/vnc_auto.html
+   http://localhost:6080/vnc_auto.html
    ```
 
 ---
@@ -115,7 +117,11 @@ The following instructions apply to Linux and macOS. The same commands will work
 2. **Inside the Container, Play the ROS Bag:**
 
    ```bash
+   gdown --folder "https://drive.google.com/drive/folders/1MRqxFCzJbHKhnDZyNssevZXgFtR074p6?usp=drive_link"
+
+   
    cd ros2bags
+    
    ros2 bag play --loop ros2bags.db3
    ```
 
@@ -128,52 +134,16 @@ The following instructions apply to Linux and macOS. The same commands will work
   - **Web Browser:** Open `http://<host_IP>:6081/vnc_auto.html`
 
 - **For Odometry (Terminal 3):**
-  - **VNC Client:** Connect to `<host_IP>:5902`
-  - **Web Browser:** Open `http://<host_IP>:6082/vnc_auto.html`
+  - **VNC Client:** Connect to `<host_IP>:5900`
+  - **Web Browser:** Open `http://<host_IP>:6080/vnc_auto.html`
 
 > **Tip:**  
 > Replace `<host_IP>` with your actual host IP address. On Linux/macOS, if you're running on the same machine, you can often use `localhost`.
 
 ---
 
-## WSL2 Specific Instructions
-
-When using WSL2 on Windows:
-
-1. **Determine Your WSL2 IP:**
-
-   In your WSL2 terminal, run:
-   ```bash
-   ip addr show eth0
-   ```
-   Look for the `inet` address (e.g., `172.17.100.209`).
-
-2. **Run Containers Using the Same Commands:**
-
-   Use the same Docker run commands as above. The `-e DISPLAY=:0` works if you rely on the container's internal Xvfb.  
-   If you need to forward the display from WSL2 to Windows, you can use an X server for Windows (e.g., VcXsrv or Xming) and adjust the `DISPLAY` variable accordingly (e.g., `DISPLAY=localhost:0.0`).  
-   Alternatively, using the built-in VNC/noVNC interface as described below is often easier.
-
-3. **Access VNC/noVNC:**
-
-   - **From Windows:**  
-     If your WSL2 instance has IP `172.17.100.209` and you've mapped ports correctly, you can access the noVNC interface via:
-     ```
-     http://172.17.100.209:6081/vnc_auto.html
-     ```
-   - **Port Forwarding Option:**  
-     If accessing the WSL2 IP directly is problematic, use Windows’ `netsh` to forward the port:
-     ```powershell
-     netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=6081 connectaddress=172.17.100.209 connectport=6081
-     ```
-     Then, access via `http://localhost:6081/vnc_auto.html` in your Windows browser.
-
----
 
 ## Troubleshooting
-
-- **X Server/Display Issues:**  
-  If parts of the GUI aren’t visible, verify that Xvfb is running correctly inside the container. For native host display, ensure your host X server is configured to allow connections (e.g., `xhost +local:docker`).
 
 - **Port Conflicts:**  
   Make sure that the host ports (5901, 6081, etc.) are not in use by other services.
