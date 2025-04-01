@@ -1,0 +1,2 @@
+/usr/bin/ar qc libkiss_icp_metrics.a CMakeFiles/kiss_icp_metrics.dir/Metrics.cpp.o
+/usr/bin/ranlib libkiss_icp_metrics.a

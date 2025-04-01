@@ -1,0 +1,4 @@
+Invoking command in '/workspace/colcon_ws/build/kiss_icp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/colcon_ws/install/lidar_calibration:/opt/ros/humble /usr/local/bin/cmake --build /workspace/colcon_ws/build/kiss_icp -- -j16 -l16
+Invoked command in '/workspace/colcon_ws/build/kiss_icp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/colcon_ws/install/lidar_calibration:/opt/ros/humble /usr/local/bin/cmake --build /workspace/colcon_ws/build/kiss_icp -- -j16 -l16
+Invoking command in '/workspace/colcon_ws/build/kiss_icp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/colcon_ws/install/lidar_calibration:/opt/ros/humble /usr/local/bin/cmake --install /workspace/colcon_ws/build/kiss_icp
+Invoked command in '/workspace/colcon_ws/build/kiss_icp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/colcon_ws/install/lidar_calibration:/opt/ros/humble /usr/local/bin/cmake --install /workspace/colcon_ws/build/kiss_icp

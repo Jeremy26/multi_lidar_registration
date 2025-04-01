@@ -1,0 +1,2 @@
+/usr/bin/ar qc libkiss_icp_core.a CMakeFiles/kiss_icp_core.dir/Registration.cpp.o CMakeFiles/kiss_icp_core.dir/VoxelHashMap.cpp.o CMakeFiles/kiss_icp_core.dir/VoxelUtils.cpp.o CMakeFiles/kiss_icp_core.dir/Preprocessing.cpp.o CMakeFiles/kiss_icp_core.dir/Threshold.cpp.o
+/usr/bin/ranlib libkiss_icp_core.a

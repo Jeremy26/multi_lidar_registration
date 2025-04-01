@@ -1,0 +1,2 @@
+/usr/bin/ar qc libkiss_icp_pipeline.a CMakeFiles/kiss_icp_pipeline.dir/KissICP.cpp.o
+/usr/bin/ranlib libkiss_icp_pipeline.a

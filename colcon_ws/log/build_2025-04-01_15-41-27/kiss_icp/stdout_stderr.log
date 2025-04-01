@@ -1,0 +1,28 @@
+[ 14%] Built target kiss_icp_metrics
+[ 28%] Built target kiss_icp_node
+[ 71%] Built target kiss_icp_core
+[ 85%] Built target kiss_icp_pipeline
+[100%] Built target odometry_component
+-- Install configuration: "Release"
+-- Up-to-date: /workspace/colcon_ws/install/kiss_icp/lib/kiss_icp/kiss_icp_node
+-- Up-to-date: /workspace/colcon_ws/install/kiss_icp/lib/libodometry_component.so
+-- Up-to-date: /workspace/colcon_ws/install/kiss_icp/share/kiss_icp//launch
+-- Up-to-date: /workspace/colcon_ws/install/kiss_icp/share/kiss_icp//launch/odometry.launch.py
+-- Up-to-date: /workspace/colcon_ws/install/kiss_icp/share/kiss_icp//rviz
+-- Up-to-date: /workspace/colcon_ws/install/kiss_icp/share/kiss_icp//rviz/kiss_icp.rviz
+-- Up-to-date: /workspace/colcon_ws/install/kiss_icp/share/ament_index/resource_index/package_run_dependencies/kiss_icp
+-- Up-to-date: /workspace/colcon_ws/install/kiss_icp/share/ament_index/resource_index/parent_prefix_path/kiss_icp
+-- Up-to-date: /workspace/colcon_ws/install/kiss_icp/share/kiss_icp/environment/ament_prefix_path.sh
+-- Up-to-date: /workspace/colcon_ws/install/kiss_icp/share/kiss_icp/environment/ament_prefix_path.dsv
+-- Up-to-date: /workspace/colcon_ws/install/kiss_icp/share/kiss_icp/environment/path.sh
+-- Up-to-date: /workspace/colcon_ws/install/kiss_icp/share/kiss_icp/environment/path.dsv
+-- Up-to-date: /workspace/colcon_ws/install/kiss_icp/share/kiss_icp/local_setup.bash
+-- Up-to-date: /workspace/colcon_ws/install/kiss_icp/share/kiss_icp/local_setup.sh
+-- Up-to-date: /workspace/colcon_ws/install/kiss_icp/share/kiss_icp/local_setup.zsh
+-- Up-to-date: /workspace/colcon_ws/install/kiss_icp/share/kiss_icp/local_setup.dsv
+-- Installing: /workspace/colcon_ws/install/kiss_icp/share/kiss_icp/package.dsv
+-- Up-to-date: /workspace/colcon_ws/install/kiss_icp/share/ament_index/resource_index/packages/kiss_icp
+-- Up-to-date: /workspace/colcon_ws/install/kiss_icp/share/ament_index/resource_index/rclcpp_components/kiss_icp
+-- Up-to-date: /workspace/colcon_ws/install/kiss_icp/share/kiss_icp/cmake/kiss_icpConfig.cmake
+-- Up-to-date: /workspace/colcon_ws/install/kiss_icp/share/kiss_icp/cmake/kiss_icpConfig-version.cmake
+-- Up-to-date: /workspace/colcon_ws/install/kiss_icp/share/kiss_icp/package.xml

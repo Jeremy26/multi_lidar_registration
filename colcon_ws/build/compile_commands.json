@@ -1,0 +1,44 @@
+[
+{
+  "directory": "/workspace/colcon_ws/build/kiss_icp/kiss_icp/core",
+  "command": "/usr/bin/c++ -DSOPHUS_USE_BASIC_LOGGING=1 -I/workspace/colcon_ws/src/kiss-icp/cpp/kiss_icp/core -I/workspace/colcon_ws/src/kiss-icp/cpp -isystem /usr/include/eigen3 -isystem /workspace/colcon_ws/build/kiss_icp/_deps/tessil-src/include -isystem /workspace/colcon_ws/build/kiss_icp/_deps/sophus-src -O3 -DNDEBUG -fPIC -fdiagnostics-color=always -Werror -Wall -Wextra -pedantic -Wcast-align -Wcast-qual -Wconversion -Wdisabled-optimization -Woverloaded-virtual -o CMakeFiles/kiss_icp_core.dir/Registration.cpp.o -c /workspace/colcon_ws/src/kiss-icp/cpp/kiss_icp/core/Registration.cpp",
+  "file": "/workspace/colcon_ws/src/kiss-icp/cpp/kiss_icp/core/Registration.cpp",
+  "output": "kiss_icp/core/CMakeFiles/kiss_icp_core.dir/Registration.cpp.o"
+},
+{
+  "directory": "/workspace/colcon_ws/build/kiss_icp/kiss_icp/core",
+  "command": "/usr/bin/c++ -DSOPHUS_USE_BASIC_LOGGING=1 -I/workspace/colcon_ws/src/kiss-icp/cpp/kiss_icp/core -I/workspace/colcon_ws/src/kiss-icp/cpp -isystem /usr/include/eigen3 -isystem /workspace/colcon_ws/build/kiss_icp/_deps/tessil-src/include -isystem /workspace/colcon_ws/build/kiss_icp/_deps/sophus-src -O3 -DNDEBUG -fPIC -fdiagnostics-color=always -Werror -Wall -Wextra -pedantic -Wcast-align -Wcast-qual -Wconversion -Wdisabled-optimization -Woverloaded-virtual -o CMakeFiles/kiss_icp_core.dir/VoxelHashMap.cpp.o -c /workspace/colcon_ws/src/kiss-icp/cpp/kiss_icp/core/VoxelHashMap.cpp",
+  "file": "/workspace/colcon_ws/src/kiss-icp/cpp/kiss_icp/core/VoxelHashMap.cpp",
+  "output": "kiss_icp/core/CMakeFiles/kiss_icp_core.dir/VoxelHashMap.cpp.o"
+},
+{
+  "directory": "/workspace/colcon_ws/build/kiss_icp/kiss_icp/core",
+  "command": "/usr/bin/c++ -DSOPHUS_USE_BASIC_LOGGING=1 -I/workspace/colcon_ws/src/kiss-icp/cpp/kiss_icp/core -I/workspace/colcon_ws/src/kiss-icp/cpp -isystem /usr/include/eigen3 -isystem /workspace/colcon_ws/build/kiss_icp/_deps/tessil-src/include -isystem /workspace/colcon_ws/build/kiss_icp/_deps/sophus-src -O3 -DNDEBUG -fPIC -fdiagnostics-color=always -Werror -Wall -Wextra -pedantic -Wcast-align -Wcast-qual -Wconversion -Wdisabled-optimization -Woverloaded-virtual -o CMakeFiles/kiss_icp_core.dir/VoxelUtils.cpp.o -c /workspace/colcon_ws/src/kiss-icp/cpp/kiss_icp/core/VoxelUtils.cpp",
+  "file": "/workspace/colcon_ws/src/kiss-icp/cpp/kiss_icp/core/VoxelUtils.cpp",
+  "output": "kiss_icp/core/CMakeFiles/kiss_icp_core.dir/VoxelUtils.cpp.o"
+},
+{
+  "directory": "/workspace/colcon_ws/build/kiss_icp/kiss_icp/core",
+  "command": "/usr/bin/c++ -DSOPHUS_USE_BASIC_LOGGING=1 -I/workspace/colcon_ws/src/kiss-icp/cpp/kiss_icp/core -I/workspace/colcon_ws/src/kiss-icp/cpp -isystem /usr/include/eigen3 -isystem /workspace/colcon_ws/build/kiss_icp/_deps/tessil-src/include -isystem /workspace/colcon_ws/build/kiss_icp/_deps/sophus-src -O3 -DNDEBUG -fPIC -fdiagnostics-color=always -Werror -Wall -Wextra -pedantic -Wcast-align -Wcast-qual -Wconversion -Wdisabled-optimization -Woverloaded-virtual -o CMakeFiles/kiss_icp_core.dir/Preprocessing.cpp.o -c /workspace/colcon_ws/src/kiss-icp/cpp/kiss_icp/core/Preprocessing.cpp",
+  "file": "/workspace/colcon_ws/src/kiss-icp/cpp/kiss_icp/core/Preprocessing.cpp",
+  "output": "kiss_icp/core/CMakeFiles/kiss_icp_core.dir/Preprocessing.cpp.o"
+},
+{
+  "directory": "/workspace/colcon_ws/build/kiss_icp/kiss_icp/core",
+  "command": "/usr/bin/c++ -DSOPHUS_USE_BASIC_LOGGING=1 -I/workspace/colcon_ws/src/kiss-icp/cpp/kiss_icp/core -I/workspace/colcon_ws/src/kiss-icp/cpp -isystem /usr/include/eigen3 -isystem /workspace/colcon_ws/build/kiss_icp/_deps/tessil-src/include -isystem /workspace/colcon_ws/build/kiss_icp/_deps/sophus-src -O3 -DNDEBUG -fPIC -fdiagnostics-color=always -Werror -Wall -Wextra -pedantic -Wcast-align -Wcast-qual -Wconversion -Wdisabled-optimization -Woverloaded-virtual -o CMakeFiles/kiss_icp_core.dir/Threshold.cpp.o -c /workspace/colcon_ws/src/kiss-icp/cpp/kiss_icp/core/Threshold.cpp",
+  "file": "/workspace/colcon_ws/src/kiss-icp/cpp/kiss_icp/core/Threshold.cpp",
+  "output": "kiss_icp/core/CMakeFiles/kiss_icp_core.dir/Threshold.cpp.o"
+},
+{
+  "directory": "/workspace/colcon_ws/build/kiss_icp/kiss_icp/metrics",
+  "command": "/usr/bin/c++  -I/workspace/colcon_ws/src/kiss-icp/cpp/kiss_icp/metrics -I/workspace/colcon_ws/src/kiss-icp/cpp -isystem /usr/include/eigen3 -O3 -DNDEBUG -fPIC -fdiagnostics-color=always -Werror -Wall -Wextra -pedantic -Wcast-align -Wcast-qual -Wconversion -Wdisabled-optimization -Woverloaded-virtual -o CMakeFiles/kiss_icp_metrics.dir/Metrics.cpp.o -c /workspace/colcon_ws/src/kiss-icp/cpp/kiss_icp/metrics/Metrics.cpp",
+  "file": "/workspace/colcon_ws/src/kiss-icp/cpp/kiss_icp/metrics/Metrics.cpp",
+  "output": "kiss_icp/metrics/CMakeFiles/kiss_icp_metrics.dir/Metrics.cpp.o"
+},
+{
+  "directory": "/workspace/colcon_ws/build/kiss_icp/kiss_icp/pipeline",
+  "command": "/usr/bin/c++ -DSOPHUS_USE_BASIC_LOGGING=1 -I/workspace/colcon_ws/src/kiss-icp/cpp/kiss_icp/pipeline -I/workspace/colcon_ws/src/kiss-icp/cpp -isystem /usr/include/eigen3 -isystem /workspace/colcon_ws/build/kiss_icp/_deps/tessil-src/include -isystem /workspace/colcon_ws/build/kiss_icp/_deps/sophus-src -O3 -DNDEBUG -fPIC -fdiagnostics-color=always -Werror -Wall -Wextra -pedantic -Wcast-align -Wcast-qual -Wconversion -Wdisabled-optimization -Woverloaded-virtual -o CMakeFiles/kiss_icp_pipeline.dir/KissICP.cpp.o -c /workspace/colcon_ws/src/kiss-icp/cpp/kiss_icp/pipeline/KissICP.cpp",
+  "file": "/workspace/colcon_ws/src/kiss-icp/cpp/kiss_icp/pipeline/KissICP.cpp",
+  "output": "kiss_icp/pipeline/CMakeFiles/kiss_icp_pipeline.dir/KissICP.cpp.o"
+}
+]

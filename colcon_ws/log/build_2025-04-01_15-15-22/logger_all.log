@@ -1,0 +1,250 @@
+[1.072s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[1.073s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f911d0b5990>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f911d0b5450>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f911d0b5450>>)
+[1.965s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.967s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.968s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.968s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.969s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.970s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.971s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/workspace/colcon_ws'
+[1.975s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.976s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.978s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.980s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.981s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.982s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.982s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.983s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.984s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[2.032s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[2.033s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[2.035s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[2.037s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[2.037s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[2.047s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[2.048s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[2.051s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[2.059s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[2.060s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[2.063s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[2.075s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[2.076s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[2.078s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[2.086s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[2.087s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[2.090s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[2.094s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[2.095s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[2.098s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[2.099s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[2.101s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[2.101s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[2.109s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[2.110s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[2.112s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[2.114s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[2.115s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[2.128s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp) by extensions ['ignore', 'ignore_ament_install']
+[2.129s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp) by extension 'ignore'
+[2.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp) by extension 'ignore_ament_install'
+[2.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp) by extensions ['colcon_pkg']
+[2.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp) by extension 'colcon_pkg'
+[2.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp) by extensions ['colcon_meta']
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp) by extension 'colcon_meta'
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp) by extensions ['ros']
+[2.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp) by extension 'ros'
+[2.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp) by extensions ['cmake', 'python']
+[2.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp) by extension 'cmake'
+[2.174s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp) by extension 'python'
+[2.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp) by extensions ['python_setup_py']
+[2.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp) by extension 'python_setup_py'
+[2.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/config) by extensions ['ignore', 'ignore_ament_install']
+[2.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/config) by extension 'ignore'
+[2.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/config) by extension 'ignore_ament_install'
+[2.219s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/config) by extensions ['colcon_pkg']
+[2.220s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/config) by extension 'colcon_pkg'
+[2.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/config) by extensions ['colcon_meta']
+[2.227s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/config) by extension 'colcon_meta'
+[2.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/config) by extensions ['ros']
+[2.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/config) by extension 'ros'
+[2.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/config) by extensions ['cmake', 'python']
+[2.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/config) by extension 'cmake'
+[2.270s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/config) by extension 'python'
+[2.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/config) by extensions ['python_setup_py']
+[2.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/config) by extension 'python_setup_py'
+[2.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/cpp) by extensions ['ignore', 'ignore_ament_install']
+[2.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/cpp) by extension 'ignore'
+[2.311s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/cpp) ignored
+[2.328s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/eval) by extensions ['ignore', 'ignore_ament_install']
+[2.328s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/eval) by extension 'ignore'
+[2.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/eval) by extension 'ignore_ament_install'
+[2.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/eval) by extensions ['colcon_pkg']
+[2.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/eval) by extension 'colcon_pkg'
+[2.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/eval) by extensions ['colcon_meta']
+[2.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/eval) by extension 'colcon_meta'
+[2.361s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/eval) by extensions ['ros']
+[2.362s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/eval) by extension 'ros'
+[2.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/eval) by extensions ['cmake', 'python']
+[2.385s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/eval) by extension 'cmake'
+[2.391s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/eval) by extension 'python'
+[2.396s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/eval) by extensions ['python_setup_py']
+[2.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/eval) by extension 'python_setup_py'
+[2.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/python) by extensions ['ignore', 'ignore_ament_install']
+[2.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/python) by extension 'ignore'
+[2.422s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/python) ignored
+[2.438s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/ros) by extensions ['ignore', 'ignore_ament_install']
+[2.439s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/ros) by extension 'ignore'
+[2.443s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/ros) by extension 'ignore_ament_install'
+[2.452s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/ros) by extensions ['colcon_pkg']
+[2.453s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/ros) by extension 'colcon_pkg'
+[2.457s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/ros) by extensions ['colcon_meta']
+[2.457s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/ros) by extension 'colcon_meta'
+[2.466s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/ros) by extensions ['ros']
+[2.466s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/ros) by extension 'ros'
+[2.520s] DEBUG:colcon.colcon_core.package_identification:Package 'src/kiss-icp/ros' with type 'ros.ament_cmake' and name 'kiss_icp'
+[2.534s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_calibration) by extensions ['ignore', 'ignore_ament_install']
+[2.535s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_calibration) by extension 'ignore'
+[2.539s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_calibration) by extension 'ignore_ament_install'
+[2.545s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_calibration) by extensions ['colcon_pkg']
+[2.546s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_calibration) by extension 'colcon_pkg'
+[2.549s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_calibration) by extensions ['colcon_meta']
+[2.550s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_calibration) by extension 'colcon_meta'
+[2.554s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_calibration) by extensions ['ros']
+[2.555s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_calibration) by extension 'ros'
+[2.592s] DEBUG:colcon.colcon_core.package_identification:Package 'src/lidar_calibration' with type 'ros.ament_python' and name 'lidar_calibration'
+[2.592s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[2.593s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[2.594s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[2.594s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[2.595s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[2.729s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[2.730s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[2.744s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 187 installed packages in /opt/ros/humble
+[2.746s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[2.860s] Level 5:colcon.colcon_core.verb:set package 'kiss_icp' build argument 'cmake_args' from command line to 'None'
+[2.861s] Level 5:colcon.colcon_core.verb:set package 'kiss_icp' build argument 'cmake_target' from command line to 'None'
+[2.861s] Level 5:colcon.colcon_core.verb:set package 'kiss_icp' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.862s] Level 5:colcon.colcon_core.verb:set package 'kiss_icp' build argument 'cmake_clean_cache' from command line to 'False'
+[2.863s] Level 5:colcon.colcon_core.verb:set package 'kiss_icp' build argument 'cmake_clean_first' from command line to 'False'
+[2.863s] Level 5:colcon.colcon_core.verb:set package 'kiss_icp' build argument 'cmake_force_configure' from command line to 'False'
+[2.864s] Level 5:colcon.colcon_core.verb:set package 'kiss_icp' build argument 'ament_cmake_args' from command line to 'None'
+[2.865s] Level 5:colcon.colcon_core.verb:set package 'kiss_icp' build argument 'catkin_cmake_args' from command line to 'None'
+[2.865s] Level 5:colcon.colcon_core.verb:set package 'kiss_icp' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.866s] DEBUG:colcon.colcon_core.verb:Building package 'kiss_icp' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspace/colcon_ws/build/kiss_icp', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspace/colcon_ws/install/kiss_icp', 'merge_install': False, 'path': '/workspace/colcon_ws/src/kiss-icp/ros', 'symlink_install': False, 'test_result_base': None}
+[2.867s] Level 5:colcon.colcon_core.verb:set package 'lidar_calibration' build argument 'cmake_args' from command line to 'None'
+[2.868s] Level 5:colcon.colcon_core.verb:set package 'lidar_calibration' build argument 'cmake_target' from command line to 'None'
+[2.869s] Level 5:colcon.colcon_core.verb:set package 'lidar_calibration' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.869s] Level 5:colcon.colcon_core.verb:set package 'lidar_calibration' build argument 'cmake_clean_cache' from command line to 'False'
+[2.870s] Level 5:colcon.colcon_core.verb:set package 'lidar_calibration' build argument 'cmake_clean_first' from command line to 'False'
+[2.871s] Level 5:colcon.colcon_core.verb:set package 'lidar_calibration' build argument 'cmake_force_configure' from command line to 'False'
+[2.871s] Level 5:colcon.colcon_core.verb:set package 'lidar_calibration' build argument 'ament_cmake_args' from command line to 'None'
+[2.872s] Level 5:colcon.colcon_core.verb:set package 'lidar_calibration' build argument 'catkin_cmake_args' from command line to 'None'
+[2.872s] Level 5:colcon.colcon_core.verb:set package 'lidar_calibration' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.873s] DEBUG:colcon.colcon_core.verb:Building package 'lidar_calibration' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspace/colcon_ws/build/lidar_calibration', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspace/colcon_ws/install/lidar_calibration', 'merge_install': False, 'path': '/workspace/colcon_ws/src/lidar_calibration', 'symlink_install': False, 'test_result_base': None}
+[2.874s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[2.877s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[2.878s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspace/colcon_ws/src/kiss-icp/ros' with build type 'ament_cmake'
+[2.879s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspace/colcon_ws/src/kiss-icp/ros'
+[2.906s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.907s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.908s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.936s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/workspace/colcon_ws/src/lidar_calibration' with build type 'ament_python'
+[2.937s] Level 1:colcon.colcon_core.shell:create_environment_hook('lidar_calibration', 'ament_prefix_path')
+[2.938s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/colcon_ws/install/lidar_calibration/share/lidar_calibration/hook/ament_prefix_path.ps1'
+[2.993s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/colcon_ws/install/lidar_calibration/share/lidar_calibration/hook/ament_prefix_path.dsv'
+[3.026s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/colcon_ws/install/lidar_calibration/share/lidar_calibration/hook/ament_prefix_path.sh'
+[3.063s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.064s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.236s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspace/colcon_ws/build/kiss_icp': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /workspace/colcon_ws/src/kiss-icp/ros -DCMAKE_INSTALL_PREFIX=/workspace/colcon_ws/install/kiss_icp
+[4.083s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/workspace/colcon_ws/src/lidar_calibration'
+[4.084s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.085s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.361s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspace/colcon_ws/src/lidar_calibration': PYTHONPATH=/workspace/colcon_ws/build/lidar_calibration/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/colcon_ws/install/lidar_calibration/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lidar_calibration build --build-base /workspace/colcon_ws/build/lidar_calibration/build install --record /workspace/colcon_ws/build/lidar_calibration/install.log --single-version-externally-managed install_data
+[11.427s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspace/colcon_ws/src/lidar_calibration' returned '0': PYTHONPATH=/workspace/colcon_ws/build/lidar_calibration/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/colcon_ws/install/lidar_calibration/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lidar_calibration build --build-base /workspace/colcon_ws/build/lidar_calibration/build install --record /workspace/colcon_ws/build/lidar_calibration/install.log --single-version-externally-managed install_data
+[11.456s] Level 1:colcon.colcon_core.environment:checking '/workspace/colcon_ws/install/lidar_calibration' for CMake module files
+[11.581s] Level 1:colcon.colcon_core.environment:checking '/workspace/colcon_ws/install/lidar_calibration' for CMake config files
+[11.850s] Level 1:colcon.colcon_core.environment:checking '/workspace/colcon_ws/install/lidar_calibration/lib'
+[11.864s] Level 1:colcon.colcon_core.environment:checking '/workspace/colcon_ws/install/lidar_calibration/bin'
+[11.869s] Level 1:colcon.colcon_core.environment:checking '/workspace/colcon_ws/install/lidar_calibration/lib/pkgconfig/lidar_calibration.pc'
+[11.874s] Level 1:colcon.colcon_core.environment:checking '/workspace/colcon_ws/install/lidar_calibration/lib/python3.10/site-packages'
+[11.882s] Level 1:colcon.colcon_core.shell:create_environment_hook('lidar_calibration', 'pythonpath')
+[11.884s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/colcon_ws/install/lidar_calibration/share/lidar_calibration/hook/pythonpath.ps1'
+[11.927s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/colcon_ws/install/lidar_calibration/share/lidar_calibration/hook/pythonpath.dsv'
+[11.967s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/colcon_ws/install/lidar_calibration/share/lidar_calibration/hook/pythonpath.sh'
+[12.007s] Level 1:colcon.colcon_core.environment:checking '/workspace/colcon_ws/install/lidar_calibration/bin'
+[12.012s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lidar_calibration)
+[12.013s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/colcon_ws/install/lidar_calibration/share/lidar_calibration/package.ps1'
+[12.049s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspace/colcon_ws/install/lidar_calibration/share/lidar_calibration/package.dsv'
+[12.085s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/colcon_ws/install/lidar_calibration/share/lidar_calibration/package.sh'
+[12.119s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/colcon_ws/install/lidar_calibration/share/lidar_calibration/package.bash'
+[12.158s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/colcon_ws/install/lidar_calibration/share/lidar_calibration/package.zsh'
+[12.197s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspace/colcon_ws/install/lidar_calibration/share/colcon-core/packages/lidar_calibration)
+[34.564s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspace/colcon_ws/build/kiss_icp' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /workspace/colcon_ws/src/kiss-icp/ros -DCMAKE_INSTALL_PREFIX=/workspace/colcon_ws/install/kiss_icp
+[34.595s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspace/colcon_ws/build/kiss_icp': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /workspace/colcon_ws/build/kiss_icp -- -j16 -l16
+[189.581s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspace/colcon_ws/build/kiss_icp' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /workspace/colcon_ws/build/kiss_icp -- -j16 -l16
+[189.846s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspace/colcon_ws/build/kiss_icp': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /workspace/colcon_ws/build/kiss_icp
+[193.904s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(kiss_icp)
+[193.919s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspace/colcon_ws/build/kiss_icp' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /workspace/colcon_ws/build/kiss_icp
+[193.955s] Level 1:colcon.colcon_core.environment:checking '/workspace/colcon_ws/install/kiss_icp' for CMake module files
+[194.139s] Level 1:colcon.colcon_core.environment:checking '/workspace/colcon_ws/install/kiss_icp' for CMake config files
+[194.300s] Level 1:colcon.colcon_core.shell:create_environment_hook('kiss_icp', 'cmake_prefix_path')
+[194.309s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/colcon_ws/install/kiss_icp/share/kiss_icp/hook/cmake_prefix_path.ps1'
+[194.426s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/colcon_ws/install/kiss_icp/share/kiss_icp/hook/cmake_prefix_path.dsv'
+[194.474s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/colcon_ws/install/kiss_icp/share/kiss_icp/hook/cmake_prefix_path.sh'
+[194.534s] Level 1:colcon.colcon_core.environment:checking '/workspace/colcon_ws/install/kiss_icp/lib'
+[194.546s] Level 1:colcon.colcon_core.shell:create_environment_hook('kiss_icp', 'ld_library_path_lib')
+[194.549s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/colcon_ws/install/kiss_icp/share/kiss_icp/hook/ld_library_path_lib.ps1'
+[194.580s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/colcon_ws/install/kiss_icp/share/kiss_icp/hook/ld_library_path_lib.dsv'
+[194.612s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/colcon_ws/install/kiss_icp/share/kiss_icp/hook/ld_library_path_lib.sh'
+[194.648s] Level 1:colcon.colcon_core.environment:checking '/workspace/colcon_ws/install/kiss_icp/bin'
+[194.653s] Level 1:colcon.colcon_core.environment:checking '/workspace/colcon_ws/install/kiss_icp/lib/pkgconfig/kiss_icp.pc'
+[194.682s] Level 1:colcon.colcon_core.environment:checking '/workspace/colcon_ws/install/kiss_icp/lib/python3.10/site-packages'
+[194.686s] Level 1:colcon.colcon_core.environment:checking '/workspace/colcon_ws/install/kiss_icp/bin'
+[194.691s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/colcon_ws/install/kiss_icp/share/kiss_icp/package.ps1'
+[194.726s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspace/colcon_ws/install/kiss_icp/share/kiss_icp/package.dsv'
+[194.756s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/colcon_ws/install/kiss_icp/share/kiss_icp/package.sh'
+[194.817s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/colcon_ws/install/kiss_icp/share/kiss_icp/package.bash'
+[194.862s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/colcon_ws/install/kiss_icp/share/kiss_icp/package.zsh'
+[194.906s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspace/colcon_ws/install/kiss_icp/share/colcon-core/packages/kiss_icp)
+[194.981s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(kiss_icp)
+[194.983s] Level 1:colcon.colcon_core.environment:checking '/workspace/colcon_ws/install/kiss_icp' for CMake module files
+[195.195s] Level 1:colcon.colcon_core.environment:checking '/workspace/colcon_ws/install/kiss_icp' for CMake config files
+[195.372s] Level 1:colcon.colcon_core.shell:create_environment_hook('kiss_icp', 'cmake_prefix_path')
+[195.374s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/colcon_ws/install/kiss_icp/share/kiss_icp/hook/cmake_prefix_path.ps1'
+[195.405s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/colcon_ws/install/kiss_icp/share/kiss_icp/hook/cmake_prefix_path.dsv'
+[195.440s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/colcon_ws/install/kiss_icp/share/kiss_icp/hook/cmake_prefix_path.sh'
+[195.478s] Level 1:colcon.colcon_core.environment:checking '/workspace/colcon_ws/install/kiss_icp/lib'
+[195.488s] Level 1:colcon.colcon_core.shell:create_environment_hook('kiss_icp', 'ld_library_path_lib')
+[195.489s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/colcon_ws/install/kiss_icp/share/kiss_icp/hook/ld_library_path_lib.ps1'
+[195.521s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/colcon_ws/install/kiss_icp/share/kiss_icp/hook/ld_library_path_lib.dsv'
+[195.553s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/colcon_ws/install/kiss_icp/share/kiss_icp/hook/ld_library_path_lib.sh'
+[195.586s] Level 1:colcon.colcon_core.environment:checking '/workspace/colcon_ws/install/kiss_icp/bin'
+[195.590s] Level 1:colcon.colcon_core.environment:checking '/workspace/colcon_ws/install/kiss_icp/lib/pkgconfig/kiss_icp.pc'
+[195.594s] Level 1:colcon.colcon_core.environment:checking '/workspace/colcon_ws/install/kiss_icp/lib/python3.10/site-packages'
+[195.597s] Level 1:colcon.colcon_core.environment:checking '/workspace/colcon_ws/install/kiss_icp/bin'
+[195.601s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/colcon_ws/install/kiss_icp/share/kiss_icp/package.ps1'
+[195.632s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspace/colcon_ws/install/kiss_icp/share/kiss_icp/package.dsv'
+[195.666s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/colcon_ws/install/kiss_icp/share/kiss_icp/package.sh'
+[195.687s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/colcon_ws/install/kiss_icp/share/kiss_icp/package.bash'
+[195.707s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/colcon_ws/install/kiss_icp/share/kiss_icp/package.zsh'
+[195.729s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspace/colcon_ws/install/kiss_icp/share/colcon-core/packages/kiss_icp)
+[195.751s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[195.764s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[195.769s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[195.777s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[196.213s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[196.214s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[196.214s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[196.216s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[196.254s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
+[196.257s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[196.267s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspace/colcon_ws/install/local_setup.ps1'
+[196.290s] INFO:colcon.colcon_core.shell:Creating prefix util module '/workspace/colcon_ws/install/_local_setup_util_ps1.py'
+[196.307s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspace/colcon_ws/install/setup.ps1'
+[196.329s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspace/colcon_ws/install/local_setup.sh'
+[196.347s] INFO:colcon.colcon_core.shell:Creating prefix util module '/workspace/colcon_ws/install/_local_setup_util_sh.py'
+[196.361s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspace/colcon_ws/install/setup.sh'
+[196.376s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspace/colcon_ws/install/local_setup.bash'
+[196.390s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspace/colcon_ws/install/setup.bash'
+[196.405s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspace/colcon_ws/install/local_setup.zsh'
+[196.419s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspace/colcon_ws/install/setup.zsh'

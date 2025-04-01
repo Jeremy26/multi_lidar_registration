@@ -1,0 +1,19 @@
+running egg_info
+writing ../../build/lidar_calibration/lidar_calibration.egg-info/PKG-INFO
+writing dependency_links to ../../build/lidar_calibration/lidar_calibration.egg-info/dependency_links.txt
+writing entry points to ../../build/lidar_calibration/lidar_calibration.egg-info/entry_points.txt
+writing requirements to ../../build/lidar_calibration/lidar_calibration.egg-info/requires.txt
+writing top-level names to ../../build/lidar_calibration/lidar_calibration.egg-info/top_level.txt
+reading manifest file '../../build/lidar_calibration/lidar_calibration.egg-info/SOURCES.txt'
+writing manifest file '../../build/lidar_calibration/lidar_calibration.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/workspace/colcon_ws/install/lidar_calibration/lib/python3.10/site-packages/lidar_calibration-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/lidar_calibration/lidar_calibration.egg-info to /workspace/colcon_ws/install/lidar_calibration/lib/python3.10/site-packages/lidar_calibration-0.0.0-py3.10.egg-info
+running install_scripts
+Installing lidar_calibration_node script to /workspace/colcon_ws/install/lidar_calibration/lib/lidar_calibration
+writing list of installed files to '/workspace/colcon_ws/build/lidar_calibration/install.log'

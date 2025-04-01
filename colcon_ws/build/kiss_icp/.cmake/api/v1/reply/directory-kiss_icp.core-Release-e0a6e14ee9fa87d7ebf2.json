@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "kiss_icp/core",
+		"source" : "/workspace/colcon_ws/src/kiss-icp/cpp/kiss_icp/core"
+	}
+}

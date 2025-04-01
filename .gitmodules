@@ -1,0 +1,3 @@
+[submodule "colcon_ws/src/kiss-icp"]
+	path = colcon_ws/src/kiss-icp
+	url = https://github.com/PRBonn/kiss-icp.git

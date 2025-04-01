@@ -1,0 +1,21 @@
+[5.373s] Invoking command in '/workspace/colcon_ws/src/lidar_calibration': PYTHONPATH=/workspace/colcon_ws/build/lidar_calibration/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/colcon_ws/install/lidar_calibration/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lidar_calibration build --build-base /workspace/colcon_ws/build/lidar_calibration/build install --record /workspace/colcon_ws/build/lidar_calibration/install.log --single-version-externally-managed install_data
+[7.153s] running egg_info
+[7.164s] writing ../../build/lidar_calibration/lidar_calibration.egg-info/PKG-INFO
+[7.179s] writing dependency_links to ../../build/lidar_calibration/lidar_calibration.egg-info/dependency_links.txt
+[7.193s] writing entry points to ../../build/lidar_calibration/lidar_calibration.egg-info/entry_points.txt
+[7.203s] writing requirements to ../../build/lidar_calibration/lidar_calibration.egg-info/requires.txt
+[7.212s] writing top-level names to ../../build/lidar_calibration/lidar_calibration.egg-info/top_level.txt
+[7.309s] reading manifest file '../../build/lidar_calibration/lidar_calibration.egg-info/SOURCES.txt'
+[7.450s] writing manifest file '../../build/lidar_calibration/lidar_calibration.egg-info/SOURCES.txt'
+[7.457s] running build
+[7.459s] running build_py
+[7.528s] running install
+[7.533s] running install_lib
+[7.719s] running install_data
+[7.772s] running install_egg_info
+[7.796s] removing '/workspace/colcon_ws/install/lidar_calibration/lib/python3.10/site-packages/lidar_calibration-0.0.0-py3.10.egg-info' (and everything under it)
+[7.932s] Copying ../../build/lidar_calibration/lidar_calibration.egg-info to /workspace/colcon_ws/install/lidar_calibration/lib/python3.10/site-packages/lidar_calibration-0.0.0-py3.10.egg-info
+[8.510s] running install_scripts
+[8.634s] Installing lidar_calibration_node script to /workspace/colcon_ws/install/lidar_calibration/lib/lidar_calibration
+[8.663s] writing list of installed files to '/workspace/colcon_ws/build/lidar_calibration/install.log'
+[10.030s] Invoked command in '/workspace/colcon_ws/src/lidar_calibration' returned '0': PYTHONPATH=/workspace/colcon_ws/build/lidar_calibration/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/colcon_ws/install/lidar_calibration/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lidar_calibration build --build-base /workspace/colcon_ws/build/lidar_calibration/build install --record /workspace/colcon_ws/build/lidar_calibration/install.log --single-version-externally-managed install_data

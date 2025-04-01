@@ -1,0 +1,6 @@
+Invoking command in '/workspace/colcon_ws/build/kiss_icp': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /workspace/colcon_ws/src/kiss-icp/ros -DCMAKE_INSTALL_PREFIX=/workspace/colcon_ws/install/kiss_icp
+Invoked command in '/workspace/colcon_ws/build/kiss_icp' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /workspace/colcon_ws/src/kiss-icp/ros -DCMAKE_INSTALL_PREFIX=/workspace/colcon_ws/install/kiss_icp
+Invoking command in '/workspace/colcon_ws/build/kiss_icp': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /workspace/colcon_ws/build/kiss_icp -- -j16 -l16
+Invoked command in '/workspace/colcon_ws/build/kiss_icp' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /workspace/colcon_ws/build/kiss_icp -- -j16 -l16
+Invoking command in '/workspace/colcon_ws/build/kiss_icp': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /workspace/colcon_ws/build/kiss_icp
+Invoked command in '/workspace/colcon_ws/build/kiss_icp' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /workspace/colcon_ws/build/kiss_icp
