@@ -21,6 +21,12 @@ This guide details how to run a multi-container ROS 2 setup using Docker on Linu
 
 ---
 
+## Pull the project docker image
+
+```bash
+docker pull mayakshanesht/ros_humble_multi_plt_final:latest
+```
+
 ## Create Docker Network
 
 Before launching any containers, create the Docker network `rosnet` so that your containers can communicate:
