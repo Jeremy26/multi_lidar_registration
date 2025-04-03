@@ -128,7 +128,7 @@ The following instructions apply to Linux and macOS. The same commands will work
    # and close this node 
    ```
    ```bash
-   #ros2 launch kiss_icp odometry.launch.py topic:=/merged_points   # check the rviz trajectory
+   ros2 launch kiss_icp odometry.launch.py topic:=/merged_points   # check the rviz trajectory
    ```
 3. **Access the Odometry Interface:**
 
@@ -151,11 +151,11 @@ The following instructions apply to Linux and macOS. The same commands will work
 
    ```bash
    cd multi_lidar_ws/
-  # colcon build --packages-select multi_lidar_calibration --symlink-install
+   # colcon build --packages-select multi_lidar_calibration --symlink-install
    . install/setup.bash
    ros2 launch multi_lidar_calibration multi_lidar_calibration_ndt.launch.xml
 
-  # or 
+   # or 
 
    # ros2 launch multi_lidar_calibration multi_lidar_calibration_icp.launch.xml
    ```
