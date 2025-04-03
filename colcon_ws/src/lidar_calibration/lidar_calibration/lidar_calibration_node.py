@@ -24,14 +24,38 @@ class LidarCalibrator(Node):
         self.tf_broadcaster = tf2_ros.TransformBroadcaster(self)
 
         self.transform_os1 = None
-        self.current_transformation = np.eye(4)
+
+        self.declare_parameter('use_initial_guess', False)
+        use_initial_guess = self.get_parameter('use_initial_guess').value
+
+        if use_initial_guess:
+            self.current_transformation = np.array([
+                [ 0.73347418, -0.67960607, 0.01229746 ,  0.0592959],
+                [ 0.67970715,  0.73324416,  -0.01874016, -0.24557677],
+                [0.00371889, 0.02210409, 0.99974876, -0.14750762],
+                [0, 0, 0, 1]
+            ])      
+        else:
+            self.current_transformation = np.eye(4)
+
+        
+        self.declare_parameter('os1_transform_fixed', False)
+        self.os1_transform_fixed = self.get_parameter('os1_transform_fixed').value
+
+        if self.os1_transform_fixed:
+            self.final_transform_os1 = np.array([
+                [ 0.73347418, -0.67960607, 0.01229746 ,  0.0592959],
+                [ 0.67970715,  0.73324416,  -0.01874016, -0.24557677],
+                [0.00371889, 0.02210409, 0.99974876, -0.14750762],
+                [0, 0, 0, 1]
+            ])      
+        else:
+            self.final_transform_os1 = np.eye(4)
 
         # Added variables for early stopping
-        self.rmse_threshold = 0.027# Adjust it as needed
-        self.os1_transform_fixed = False  # Flag to indicate if OS1 transform is fixed
-        self.final_transform_os1 = np.eye(4)  # Store the final transform
+        self.rmse_threshold = 0.027  # Adjust it as needed
         self.transform_os1_counter = 0  # A counter for the number of frames the transform is used
-        self.max_iterations = 5   # maximum number of iterations, prevent infinite loops
+        self.max_iterations = 5  # maximum number of iterations, prevent infinite loops
 
         velodyne_sub = Subscriber(self, PointCloud2, '/velodyne_points')
         os1_sub = Subscriber(self, PointCloud2, '/os1_cloud_node/points')
@@ -203,24 +227,24 @@ class LidarCalibrator(Node):
             self.transform_os1, rmse_os1 = self.multi_scale_registration(os1_pcd, velodyne_pcd)
 
             if rmse_os1 is not None and rmse_os1 < self.rmse_threshold and rmse_os1 !=0:
-                self.get_logger().info(f"OS1 registration converged, RMSE: {rmse_os1:.8f}")
+                self.get_logger().info(f"OS1 registration might be converged, RMSE: {rmse_os1:.8f}")
                 self.os1_transform_fixed = True
                 self.final_transform_os1 = self.transform_os1
                 self.transform_os1_counter = 0  # reset counter
             else:
-                self.get_logger().info(f"OS1 registration in progress, RMSE: {rmse_os1:.8f}")
+                self.get_logger().info(f"OS1 registration in progress {self.transform_os1}, RMSE: {rmse_os1:.8f}")
         else:
             # Use the fixed transform if RMSE is below the threshold
             self.transform_os1 = self.final_transform_os1
             self.transform_os1_counter += 1
-            self.get_logger().info(f"Using fixed OS1 transform, count: {self.transform_os1_counter}")
+            self.get_logger().info(f"Using fixed OS1 transform:{self.transform_os1}, count: {self.transform_os1_counter}")
 
         if self.transform_os1 is None:
             self.get_logger().warn("Skipping merge and publish due to failed registration.")
             return
 
         os1_pcd.transform(self.transform_os1)  # apply transformation to the pointcloud
-
+        self.get_logger().info(f"OS1 transformation is converged for {self.transform_os1}")
         self.publish_transform(self.transform_os1, "os1", "velodyne")  # publish transform
 
         merged_pcd = velodyne_pcd + os1_pcd

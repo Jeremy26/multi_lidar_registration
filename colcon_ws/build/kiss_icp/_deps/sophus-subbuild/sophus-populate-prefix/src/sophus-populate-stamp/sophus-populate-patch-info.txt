@@ -1,6 +1,0 @@
-# This is a generated file and its contents are an internal implementation detail.
-# The update step will be re-executed if anything in this file changes.
-# No other meaning or use of this file is supported.
-
-command=patch;-p1;<;/workspace/colcon_ws/src/kiss-icp/cpp/kiss_icp/3rdparty/sophus/sophus.patch
-work_dir=/workspace/colcon_ws/build/kiss_icp/_deps/sophus-src

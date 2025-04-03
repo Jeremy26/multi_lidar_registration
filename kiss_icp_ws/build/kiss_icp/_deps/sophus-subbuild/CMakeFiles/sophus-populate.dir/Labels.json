@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/workspace/kiss_icp_ws/build/kiss_icp/_deps/sophus-subbuild/CMakeFiles/sophus-populate"
+		},
+		{
+			"file" : "/workspace/kiss_icp_ws/build/kiss_icp/_deps/sophus-subbuild/CMakeFiles/sophus-populate.rule"
+		},
+		{
+			"file" : "/workspace/kiss_icp_ws/build/kiss_icp/_deps/sophus-subbuild/CMakeFiles/sophus-populate-complete.rule"
+		},
+		{
+			"file" : "/workspace/kiss_icp_ws/build/kiss_icp/_deps/sophus-subbuild/sophus-populate-prefix/src/sophus-populate-stamp/sophus-populate-build.rule"
+		},
+		{
+			"file" : "/workspace/kiss_icp_ws/build/kiss_icp/_deps/sophus-subbuild/sophus-populate-prefix/src/sophus-populate-stamp/sophus-populate-configure.rule"
+		},
+		{
+			"file" : "/workspace/kiss_icp_ws/build/kiss_icp/_deps/sophus-subbuild/sophus-populate-prefix/src/sophus-populate-stamp/sophus-populate-download.rule"
+		},
+		{
+			"file" : "/workspace/kiss_icp_ws/build/kiss_icp/_deps/sophus-subbuild/sophus-populate-prefix/src/sophus-populate-stamp/sophus-populate-install.rule"
+		},
+		{
+			"file" : "/workspace/kiss_icp_ws/build/kiss_icp/_deps/sophus-subbuild/sophus-populate-prefix/src/sophus-populate-stamp/sophus-populate-mkdir.rule"
+		},
+		{
+			"file" : "/workspace/kiss_icp_ws/build/kiss_icp/_deps/sophus-subbuild/sophus-populate-prefix/src/sophus-populate-stamp/sophus-populate-patch_disconnected.rule"
+		},
+		{
+			"file" : "/workspace/kiss_icp_ws/build/kiss_icp/_deps/sophus-subbuild/sophus-populate-prefix/src/sophus-populate-stamp/sophus-populate-test.rule"
+		},
+		{
+			"file" : "/workspace/kiss_icp_ws/build/kiss_icp/_deps/sophus-subbuild/sophus-populate-prefix/src/sophus-populate-stamp/sophus-populate-update_disconnected.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"sophus-populate"
+		],
+		"name" : "sophus-populate"
+	}
+}

@@ -1,0 +1,106 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-d265d3023a7b6b79811c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "multi_lidar_calibration",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "multi_lidar_calibration_icp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-multi_lidar_calibration_icp-81a2094046ea8fcefc74.json",
+					"name" : "multi_lidar_calibration_icp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "multi_lidar_calibration_icp_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-multi_lidar_calibration_icp_node-38f9ed79846ae66a6e11.json",
+					"name" : "multi_lidar_calibration_icp_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "multi_lidar_calibration_ndt::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-multi_lidar_calibration_ndt-565516c36cf4aaa98cb7.json",
+					"name" : "multi_lidar_calibration_ndt",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "multi_lidar_calibration_ndt_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-multi_lidar_calibration_ndt_node-eb9bf9d885d434051a39.json",
+					"name" : "multi_lidar_calibration_ndt_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "multi_lidar_calibration_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-multi_lidar_calibration_uninstall-af9fb926bd9d2afb192e.json",
+					"name" : "multi_lidar_calibration_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-cb31b95e475028e2deb9.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/workspace/multi_lidar_ws/build/multi_lidar_calibration",
+		"source" : "/workspace/multi_lidar_ws/src/multi_lidar_calibration"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

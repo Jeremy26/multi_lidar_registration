@@ -18,8 +18,9 @@ setup(
     description='ROS2 package for LiDAR calibration',
     license='TODO: License declaration',
     entry_points={
-        'console_scripts': [
-            'lidar_calibration_node = lidar_calibration.lidar_calibration_node:main',
-        ],
-    },
+    'console_scripts': [
+        'lidar_calibration_node = lidar_calibration.lidar_calibration_node:main',
+        'uncalibrated_node = lidar_calibration.uncalibrated_node:main',
+    ],
+},
 )

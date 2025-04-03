@@ -1,0 +1,23 @@
+running develop
+running egg_info
+creating lidar_calibration.egg-info
+writing lidar_calibration.egg-info/PKG-INFO
+writing dependency_links to lidar_calibration.egg-info/dependency_links.txt
+writing entry points to lidar_calibration.egg-info/entry_points.txt
+writing requirements to lidar_calibration.egg-info/requires.txt
+writing top-level names to lidar_calibration.egg-info/top_level.txt
+writing manifest file 'lidar_calibration.egg-info/SOURCES.txt'
+reading manifest file 'lidar_calibration.egg-info/SOURCES.txt'
+writing manifest file 'lidar_calibration.egg-info/SOURCES.txt'
+running build_ext
+Creating /workspace/colcon_ws/install/lidar_calibration/lib/python3.10/site-packages/lidar-calibration.egg-link (link to .)
+Installing lidar_calibration_node script to /workspace/colcon_ws/install/lidar_calibration/lib/lidar_calibration
+Installing uncalibrated_node script to /workspace/colcon_ws/install/lidar_calibration/lib/lidar_calibration
+
+Installed /workspace/colcon_ws/build/lidar_calibration
+running symlink_data
+creating /workspace/colcon_ws/install/lidar_calibration/share/ament_index
+creating /workspace/colcon_ws/install/lidar_calibration/share/ament_index/resource_index
+creating /workspace/colcon_ws/install/lidar_calibration/share/ament_index/resource_index/packages
+symbolically linking /workspace/colcon_ws/build/lidar_calibration/resource/lidar_calibration -> /workspace/colcon_ws/install/lidar_calibration/share/ament_index/resource_index/packages
+symbolically linking /workspace/colcon_ws/build/lidar_calibration/package.xml -> /workspace/colcon_ws/install/lidar_calibration/share/lidar_calibration

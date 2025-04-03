@@ -1,0 +1,200 @@
+[0.717s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'kiss_icp', '--symlink-install']
+[0.718s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['kiss_icp'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7efdabe85a80>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7efdabe85540>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7efdabe85540>>)
+[1.587s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.589s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.589s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.590s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.590s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.591s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.592s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/workspace/kiss_icp_ws'
+[1.596s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.597s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.598s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.599s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.600s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.600s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.601s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.601s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.602s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.645s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.646s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.647s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.648s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.648s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.655s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.656s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.660s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.666s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.666s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.669s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.680s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.681s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.683s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.689s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.690s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.692s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.696s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.697s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.699s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.700s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.701s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.702s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.710s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.710s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.712s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.714s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.714s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp) by extensions ['ignore', 'ignore_ament_install']
+[1.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp) by extension 'ignore'
+[1.731s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp) by extension 'ignore_ament_install'
+[1.737s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp) by extensions ['colcon_pkg']
+[1.738s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp) by extension 'colcon_pkg'
+[1.741s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp) by extensions ['colcon_meta']
+[1.742s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp) by extension 'colcon_meta'
+[1.746s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp) by extensions ['ros']
+[1.747s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp) by extension 'ros'
+[1.763s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp) by extensions ['cmake', 'python']
+[1.764s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp) by extension 'cmake'
+[1.768s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp) by extension 'python'
+[1.772s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp) by extensions ['python_setup_py']
+[1.773s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp) by extension 'python_setup_py'
+[1.793s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/config) by extensions ['ignore', 'ignore_ament_install']
+[1.793s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/config) by extension 'ignore'
+[1.798s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/config) by extension 'ignore_ament_install'
+[1.807s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/config) by extensions ['colcon_pkg']
+[1.808s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/config) by extension 'colcon_pkg'
+[1.813s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/config) by extensions ['colcon_meta']
+[1.814s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/config) by extension 'colcon_meta'
+[1.825s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/config) by extensions ['ros']
+[1.826s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/config) by extension 'ros'
+[1.847s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/config) by extensions ['cmake', 'python']
+[1.848s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/config) by extension 'cmake'
+[1.853s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/config) by extension 'python'
+[1.858s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/config) by extensions ['python_setup_py']
+[1.858s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/config) by extension 'python_setup_py'
+[1.878s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/cpp) by extensions ['ignore', 'ignore_ament_install']
+[1.879s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/cpp) by extension 'ignore'
+[1.885s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/cpp) ignored
+[1.903s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/eval) by extensions ['ignore', 'ignore_ament_install']
+[1.904s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/eval) by extension 'ignore'
+[1.910s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/eval) by extension 'ignore_ament_install'
+[1.919s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/eval) by extensions ['colcon_pkg']
+[1.920s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/eval) by extension 'colcon_pkg'
+[1.924s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/eval) by extensions ['colcon_meta']
+[1.925s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/eval) by extension 'colcon_meta'
+[1.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/eval) by extensions ['ros']
+[1.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/eval) by extension 'ros'
+[1.960s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/eval) by extensions ['cmake', 'python']
+[1.961s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/eval) by extension 'cmake'
+[1.968s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/eval) by extension 'python'
+[1.975s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/eval) by extensions ['python_setup_py']
+[1.976s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/eval) by extension 'python_setup_py'
+[1.999s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/python) by extensions ['ignore', 'ignore_ament_install']
+[2.000s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/python) by extension 'ignore'
+[2.006s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/python) ignored
+[2.023s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/ros) by extensions ['ignore', 'ignore_ament_install']
+[2.024s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/ros) by extension 'ignore'
+[2.029s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/ros) by extension 'ignore_ament_install'
+[2.039s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/ros) by extensions ['colcon_pkg']
+[2.040s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/ros) by extension 'colcon_pkg'
+[2.044s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/ros) by extensions ['colcon_meta']
+[2.045s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/ros) by extension 'colcon_meta'
+[2.054s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/ros) by extensions ['ros']
+[2.054s] Level 1:colcon.colcon_core.package_identification:_identify(src/kiss-icp/ros) by extension 'ros'
+[2.107s] DEBUG:colcon.colcon_core.package_identification:Package 'src/kiss-icp/ros' with type 'ros.ament_cmake' and name 'kiss_icp'
+[2.108s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[2.109s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[2.109s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[2.110s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[2.111s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[2.225s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[2.226s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[2.241s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 187 installed packages in /opt/ros/humble
+[2.243s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[2.336s] Level 5:colcon.colcon_core.verb:set package 'kiss_icp' build argument 'cmake_args' from command line to 'None'
+[2.337s] Level 5:colcon.colcon_core.verb:set package 'kiss_icp' build argument 'cmake_target' from command line to 'None'
+[2.338s] Level 5:colcon.colcon_core.verb:set package 'kiss_icp' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.338s] Level 5:colcon.colcon_core.verb:set package 'kiss_icp' build argument 'cmake_clean_cache' from command line to 'False'
+[2.339s] Level 5:colcon.colcon_core.verb:set package 'kiss_icp' build argument 'cmake_clean_first' from command line to 'False'
+[2.339s] Level 5:colcon.colcon_core.verb:set package 'kiss_icp' build argument 'cmake_force_configure' from command line to 'False'
+[2.340s] Level 5:colcon.colcon_core.verb:set package 'kiss_icp' build argument 'ament_cmake_args' from command line to 'None'
+[2.341s] Level 5:colcon.colcon_core.verb:set package 'kiss_icp' build argument 'catkin_cmake_args' from command line to 'None'
+[2.341s] Level 5:colcon.colcon_core.verb:set package 'kiss_icp' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.342s] DEBUG:colcon.colcon_core.verb:Building package 'kiss_icp' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspace/kiss_icp_ws/build/kiss_icp', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspace/kiss_icp_ws/install/kiss_icp', 'merge_install': False, 'path': '/workspace/kiss_icp_ws/src/kiss-icp/ros', 'symlink_install': True, 'test_result_base': None}
+[2.343s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[2.348s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[2.350s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspace/kiss_icp_ws/src/kiss-icp/ros' with build type 'ament_cmake'
+[2.350s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspace/kiss_icp_ws/src/kiss-icp/ros'
+[2.373s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.374s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.374s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.568s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspace/kiss_icp_ws/build/kiss_icp': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /workspace/kiss_icp_ws/src/kiss-icp/ros -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspace/kiss_icp_ws/install/kiss_icp
+[33.419s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspace/kiss_icp_ws/build/kiss_icp' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /workspace/kiss_icp_ws/src/kiss-icp/ros -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspace/kiss_icp_ws/install/kiss_icp
+[33.463s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspace/kiss_icp_ws/build/kiss_icp': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /workspace/kiss_icp_ws/build/kiss_icp -- -j16 -l16
+[172.560s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspace/kiss_icp_ws/build/kiss_icp' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /workspace/kiss_icp_ws/build/kiss_icp -- -j16 -l16
+[172.800s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspace/kiss_icp_ws/build/kiss_icp': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /workspace/kiss_icp_ws/build/kiss_icp
+[174.966s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(kiss_icp)
+[174.977s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspace/kiss_icp_ws/build/kiss_icp' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /workspace/kiss_icp_ws/build/kiss_icp
+[175.127s] Level 1:colcon.colcon_core.environment:checking '/workspace/kiss_icp_ws/install/kiss_icp' for CMake module files
+[175.378s] Level 1:colcon.colcon_core.environment:checking '/workspace/kiss_icp_ws/install/kiss_icp' for CMake config files
+[175.649s] Level 1:colcon.colcon_core.shell:create_environment_hook('kiss_icp', 'cmake_prefix_path')
+[175.660s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/kiss_icp_ws/install/kiss_icp/share/kiss_icp/hook/cmake_prefix_path.ps1'
+[175.755s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/kiss_icp_ws/install/kiss_icp/share/kiss_icp/hook/cmake_prefix_path.dsv'
+[175.795s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/kiss_icp_ws/install/kiss_icp/share/kiss_icp/hook/cmake_prefix_path.sh'
+[175.849s] Level 1:colcon.colcon_core.environment:checking '/workspace/kiss_icp_ws/install/kiss_icp/lib'
+[175.860s] Level 1:colcon.colcon_core.shell:create_environment_hook('kiss_icp', 'ld_library_path_lib')
+[175.861s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/kiss_icp_ws/install/kiss_icp/share/kiss_icp/hook/ld_library_path_lib.ps1'
+[175.894s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/kiss_icp_ws/install/kiss_icp/share/kiss_icp/hook/ld_library_path_lib.dsv'
+[175.926s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/kiss_icp_ws/install/kiss_icp/share/kiss_icp/hook/ld_library_path_lib.sh'
+[175.960s] Level 1:colcon.colcon_core.environment:checking '/workspace/kiss_icp_ws/install/kiss_icp/bin'
+[175.963s] Level 1:colcon.colcon_core.environment:checking '/workspace/kiss_icp_ws/install/kiss_icp/lib/pkgconfig/kiss_icp.pc'
+[175.984s] Level 1:colcon.colcon_core.environment:checking '/workspace/kiss_icp_ws/install/kiss_icp/lib/python3.10/site-packages'
+[175.989s] Level 1:colcon.colcon_core.environment:checking '/workspace/kiss_icp_ws/install/kiss_icp/bin'
+[175.994s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/kiss_icp_ws/install/kiss_icp/share/kiss_icp/package.ps1'
+[176.025s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspace/kiss_icp_ws/install/kiss_icp/share/kiss_icp/package.dsv'
+[176.068s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/kiss_icp_ws/install/kiss_icp/share/kiss_icp/package.sh'
+[176.105s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/kiss_icp_ws/install/kiss_icp/share/kiss_icp/package.bash'
+[176.143s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/kiss_icp_ws/install/kiss_icp/share/kiss_icp/package.zsh'
+[176.180s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspace/kiss_icp_ws/install/kiss_icp/share/colcon-core/packages/kiss_icp)
+[176.266s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(kiss_icp)
+[176.269s] Level 1:colcon.colcon_core.environment:checking '/workspace/kiss_icp_ws/install/kiss_icp' for CMake module files
+[176.542s] Level 1:colcon.colcon_core.environment:checking '/workspace/kiss_icp_ws/install/kiss_icp' for CMake config files
+[176.839s] Level 1:colcon.colcon_core.shell:create_environment_hook('kiss_icp', 'cmake_prefix_path')
+[176.841s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/kiss_icp_ws/install/kiss_icp/share/kiss_icp/hook/cmake_prefix_path.ps1'
+[176.877s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/kiss_icp_ws/install/kiss_icp/share/kiss_icp/hook/cmake_prefix_path.dsv'
+[176.916s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/kiss_icp_ws/install/kiss_icp/share/kiss_icp/hook/cmake_prefix_path.sh'
+[176.962s] Level 1:colcon.colcon_core.environment:checking '/workspace/kiss_icp_ws/install/kiss_icp/lib'
+[176.974s] Level 1:colcon.colcon_core.shell:create_environment_hook('kiss_icp', 'ld_library_path_lib')
+[176.976s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/kiss_icp_ws/install/kiss_icp/share/kiss_icp/hook/ld_library_path_lib.ps1'
+[177.015s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/kiss_icp_ws/install/kiss_icp/share/kiss_icp/hook/ld_library_path_lib.dsv'
+[177.052s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/kiss_icp_ws/install/kiss_icp/share/kiss_icp/hook/ld_library_path_lib.sh'
+[177.090s] Level 1:colcon.colcon_core.environment:checking '/workspace/kiss_icp_ws/install/kiss_icp/bin'
+[177.094s] Level 1:colcon.colcon_core.environment:checking '/workspace/kiss_icp_ws/install/kiss_icp/lib/pkgconfig/kiss_icp.pc'
+[177.098s] Level 1:colcon.colcon_core.environment:checking '/workspace/kiss_icp_ws/install/kiss_icp/lib/python3.10/site-packages'
+[177.103s] Level 1:colcon.colcon_core.environment:checking '/workspace/kiss_icp_ws/install/kiss_icp/bin'
+[177.108s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/kiss_icp_ws/install/kiss_icp/share/kiss_icp/package.ps1'
+[177.137s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspace/kiss_icp_ws/install/kiss_icp/share/kiss_icp/package.dsv'
+[177.168s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/kiss_icp_ws/install/kiss_icp/share/kiss_icp/package.sh'
+[177.197s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/kiss_icp_ws/install/kiss_icp/share/kiss_icp/package.bash'
+[177.228s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/kiss_icp_ws/install/kiss_icp/share/kiss_icp/package.zsh'
+[177.257s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspace/kiss_icp_ws/install/kiss_icp/share/colcon-core/packages/kiss_icp)
+[177.285s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[177.295s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[177.298s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[177.302s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[177.505s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[177.506s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[177.507s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[177.508s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[177.562s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
+[177.564s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[177.569s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspace/kiss_icp_ws/install/local_setup.ps1'
+[177.591s] INFO:colcon.colcon_core.shell:Creating prefix util module '/workspace/kiss_icp_ws/install/_local_setup_util_ps1.py'
+[177.608s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspace/kiss_icp_ws/install/setup.ps1'
+[177.629s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspace/kiss_icp_ws/install/local_setup.sh'
+[177.645s] INFO:colcon.colcon_core.shell:Creating prefix util module '/workspace/kiss_icp_ws/install/_local_setup_util_sh.py'
+[177.661s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspace/kiss_icp_ws/install/setup.sh'
+[177.678s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspace/kiss_icp_ws/install/local_setup.bash'
+[177.697s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspace/kiss_icp_ws/install/setup.bash'
+[177.714s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspace/kiss_icp_ws/install/local_setup.zsh'
+[177.730s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspace/kiss_icp_ws/install/setup.zsh'

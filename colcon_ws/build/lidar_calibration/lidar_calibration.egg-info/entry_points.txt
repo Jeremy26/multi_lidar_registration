@@ -1,3 +1,4 @@
 [console_scripts]
 lidar_calibration_node = lidar_calibration.lidar_calibration_node:main
+uncalibrated_node = lidar_calibration.uncalibrated_node:main
 

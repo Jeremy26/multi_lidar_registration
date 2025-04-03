@@ -1,0 +1,12 @@
+# This is a generated file and its contents are an internal implementation detail.
+# The download step will be re-executed if anything in this file changes.
+# No other meaning or use of this file is supported.
+
+method=url
+command=/usr/local/bin/cmake;-P;/workspace/kiss_icp_ws/build/kiss_icp/_deps/sophus-subbuild/sophus-populate-prefix/src/sophus-populate-stamp/download-sophus-populate.cmake;COMMAND;/usr/local/bin/cmake;-P;/workspace/kiss_icp_ws/build/kiss_icp/_deps/sophus-subbuild/sophus-populate-prefix/src/sophus-populate-stamp/verify-sophus-populate.cmake;COMMAND;/usr/local/bin/cmake;-P;/workspace/kiss_icp_ws/build/kiss_icp/_deps/sophus-subbuild/sophus-populate-prefix/src/sophus-populate-stamp/extract-sophus-populate.cmake
+source_dir=/workspace/kiss_icp_ws/build/kiss_icp/_deps/sophus-src
+work_dir=/workspace/kiss_icp_ws/build/kiss_icp/_deps
+url(s)=https://github.com/strasdat/Sophus/archive/refs/tags/1.22.10.tar.gz
+hash=
+no_extract=
+

@@ -11,10 +11,11 @@ find_package(std_msgs REQUIRED)
 find_package(OpenCV REQUIRED)
 find_package(Open3D REQUIRED)
 
-
 install(
-  PROGRAMS lidar_calibration/lidar_calibration/lidar_calibration_node.py
+  PROGRAMS
+    lidar_calibration/lidar_calibration/lidar_calibration_node.py
+    lidar_calibration/lidar_calibration/uncalibrated_node.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
-ament_package()
+ament_package()  # This should always be the last line

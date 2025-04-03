@@ -11,10 +11,11 @@ This guide details how to run a multi-container ROS 2 setup using Docker on Linu
 
 - [Create Docker Network](#create-docker-network)
 - [Running the Containers](#running-the-containers)
-  - [Terminal 1: Lidar Calibration Node](#terminal-1-lidar-calibration-node)
+  - [Terminal 1: ROS Bag Playback](#terminal-1-ros-bag-playback)
   - [Terminal 2: Launch RViz](#terminal-2-launch-rviz)
-  - [Terminal 3: Run Odometry Node (KISS-ICP)](#terminal-3-run-odometry-node-kiss-icp)
-  - [Terminal 4: ROS Bag Playback](#terminal-4-ros-bag-playback)
+  - [Terminal 3: Lidar Calibration Node](#terminal-3-lidar-calibration-node)
+  - [Terminal 4: Run off the shelf calibration Node with NDT/ICP (KISS-ICP)](#terminal-5-run-calibration-node-ndt-icp)
+  - [Terminal 5: Run Odometry Node (KISS-ICP)](#terminal-4-run-odometry-node-kiss-icp)
 - [Accessing the VNC/noVNC Interface](#accessing-the-vncnovnc-interface)
 - [WSL2 Specific Instructions](#wsl2-specific-instructions)
 - [Troubleshooting](#troubleshooting)
@@ -24,7 +25,7 @@ This guide details how to run a multi-container ROS 2 setup using Docker on Linu
 ## Pull the project docker image
 
 ```bash
-docker pull mayakshanesht/ros_humble_multi_plt_final:latest
+docker pull thinkautonomous/ros2_humble_multi_plt_final:latest
 ```
 
 ## Create Docker Network
@@ -41,31 +42,32 @@ docker network create rosnet
 
 The following instructions apply to Linux and macOS. The same commands will work in WSL2 (see [WSL2 Specific Instructions](#wsl2-specific-instructions) below).
 
-### Terminal 1: Lidar Calibration Node
+### Terminal 1: ROS Bag Playback
 
-1. **Run the Container & Build Workspace:**
+1. **Start a Container for ROS Bag Playback:**
 
    ```bash
-   docker run -it --network rosnet -e DISPLAY=:0 -v "$(pwd):/workspace/" mayakshanesht/ros_humble_multi_plt_final:latest
+   docker run -it --network rosnet -e DISPLAY=:0 -v "$(pwd):/workspace/" thinkautonomous/ros2_humble_multi_plt_final:latest
    ```
 
-2. **Inside the Container:**
+2. **Inside the Container, Play the ROS Bag:**
 
    ```bash
-   cd colcon_ws/
-   colcon build
-   . install/setup.bash
-   ros2 run lidar_calibration lidar_calibration_node
+   gdown --folder "https://drive.google.com/drive/folders/12pR6wQEqxaXjcPqfb802WWwhzXz9_Ayw?usp=sharing"
+
+   
+   cd ros2_bags/dynamic_road03
+    
+   ros2 bag play --loop ros2bags.db3
    ```
 
 ---
-
 ### Terminal 2: Launch RViz
 
 1. **Start a Container for RViz:**
 
    ```bash
-   docker run -it --network rosnet -p 5901:5900 -p 6081:6080 -e DISPLAY=:0 -v "$(pwd):/workspace/" mayakshanesht/ros_humble_multi_plt_final:latest
+   docker run -it --network rosnet -p 5901:5900 -p 6081:6080 -e DISPLAY=:0 -v "$(pwd):/workspace/" thinkautonomous/ros2_humble_multi_plt_final:latest
    ```
 
 2. **Inside the Container, Launch RViz:**
@@ -86,21 +88,67 @@ The following instructions apply to Linux and macOS. The same commands will work
 
 ---
 
-### Terminal 3: Run Odometry Node (KISS-ICP)
+### Terminal 3: Lidar Calibration Node
+
+1. **Run the Container & Build Workspace:**
+
+   ```bash
+   docker run -it --network rosnet -e DISPLAY=:0 -v "$(pwd):/workspace/" thinkautonomous/ros2_humble_multi_plt_final:latest
+   ```
+
+2. **Inside the Container:**
+
+   ```bash
+   cd colcon_ws/
+   colcon build --packages-select lidar_calibration --symlink-install
+   . install/setup.bash
+   ros2 run lidar_calibration uncalibrated_node  # check /uncalibrated_points topic in rviz
+   ros2 run lidar_calibration lidar_calibration_node  # check /merged_points topic in rviz
+
+   ```
+
+---
+### Terminal 4: Multi Lidar Calibration Node
+
+1. **Run the Container & Build Workspace:**
+
+   ```bash
+   docker run -it --network rosnet -e DISPLAY=:0 -v "$(pwd):/workspace/" thinkautonomous/ros2_humble_multi_plt_final:latest
+   ```
+
+2. **Inside the Container:**
+
+   ```bash
+   cd multi_lidar_ws/
+   colcon build --packages-select multi_lidar_calibration --symlink-install
+   . install/setup.bash
+   ros2 launch multi_lidar_calibration multi_lidar_calibration_ndt.launch.xml
+
+   or 
+
+   ros2 launch multi_lidar_calibration multi_lidar_calibration_icp.launch.xml
+   ```
+
+---
+
+
+### Terminal 5: Run Odometry Node (KISS-ICP)
 
 1. **Start a Container for the Odometry Node:**
 
    ```bash
-   docker run -it --network rosnet -p 5902:5900 -p 6082:6080 -e DISPLAY=:0 -v "$(pwd):/workspace/" mayakshanesht/ros_humble_multi_plt_final:latest
+   docker run -it --network rosnet -p 5900:5900 -p 6080:6080 -e DISPLAY=:0 -v "$(pwd):/workspace/" thinkautonomous/ros2_humble_multi_plt_final:latest
    ```
 
 2. **Inside the Container, Build and Launch:**
 
    ```bash
-   cd colcon_ws
-   colcon build
+   cd kiss_icp_ws/
+   colcon build --packages-select kiss_icp --symlink-install
    . install/setup.bash
-   ros2 launch kiss_icp odometry.launch.py topic:=/merged_points
+
+   ros2 launch kiss_icp odometry.launch.py topic:=/velodyne_points # check the rviz trajectory
+   ros2 launch kiss_icp odometry.launch.py topic:=/merged_points   # check the rviz trajectory
    ```
 
 3. **Access the Odometry Interface:**
@@ -112,26 +160,7 @@ The following instructions apply to Linux and macOS. The same commands will work
 
 ---
 
-### Terminal 4: ROS Bag Playback
 
-1. **Start a Container for ROS Bag Playback:**
-
-   ```bash
-   docker run -it --network rosnet -e DISPLAY=:0 -v "$(pwd):/workspace/" mayakshanesht/ros_humble_multi_plt_final:latest
-   ```
-
-2. **Inside the Container, Play the ROS Bag:**
-
-   ```bash
-   gdown --folder "https://drive.google.com/drive/folders/1MRqxFCzJbHKhnDZyNssevZXgFtR074p6?usp=drive_link"
-
-   
-   cd ros2bags
-    
-   ros2 bag play --loop ros2bags.db3
-   ```
-
----
 
 ## Accessing the VNC/noVNC Interface
 
@@ -139,7 +168,7 @@ The following instructions apply to Linux and macOS. The same commands will work
   - **VNC Client:** Connect to `<host_IP>:5901`
   - **Web Browser:** Open `http://<host_IP>:6081/vnc_auto.html`
 
-- **For Odometry (Terminal 3):**
+- **For Odometry (Terminal 5):**
   - **VNC Client:** Connect to `<host_IP>:5900`
   - **Web Browser:** Open `http://<host_IP>:6080/vnc_auto.html`
 
