@@ -14,8 +14,8 @@ This guide details how to run a multi-container ROS 2 setup using Docker on Linu
   - [Terminal 1: ROS Bag Playback](#terminal-1-ros-bag-playback)
   - [Terminal 2: Launch RViz](#terminal-2-launch-rviz)
   - [Terminal 3: Lidar Calibration Node](#terminal-3-lidar-calibration-node)
-  - [Terminal 4: Run off the shelf calibration Node with NDT/ICP (KISS-ICP)](#terminal-5-run-calibration-node-ndt-icp)
-  - [Terminal 5: Run Odometry Node (KISS-ICP)](#terminal-4-run-odometry-node-kiss-icp)
+  - [Terminal 4: Run Odometry Node (KISS-ICP)](#terminal-4-run-odometry-node-kiss-icp)
+  - [Terminal 5: Run off the shelf calibration Node with NDT/ICP ](#terminal-5-run-calibration-node-ndt-icp)
 - [Accessing the VNC/noVNC Interface](#accessing-the-vncnovnc-interface)
 - [WSL2 Specific Instructions](#wsl2-specific-instructions)
 - [Troubleshooting](#troubleshooting)
@@ -100,39 +100,16 @@ The following instructions apply to Linux and macOS. The same commands will work
 
    ```bash
    cd colcon_ws/
-   colcon build --packages-select lidar_calibration --symlink-install
+   # colcon build --packages-select lidar_calibration --symlink-install
    . install/setup.bash
    ros2 run lidar_calibration uncalibrated_node  # check /uncalibrated_points topic in rviz
+   # and close this node , and run it
+   ```
+   ```bash
    ros2 run lidar_calibration lidar_calibration_node  # check /merged_points topic in rviz
-
    ```
 
----
-### Terminal 4: Multi Lidar Calibration Node
-
-1. **Run the Container & Build Workspace:**
-
-   ```bash
-   docker run -it --network rosnet -e DISPLAY=:0 -v "$(pwd):/workspace/" thinkautonomous/ros2_humble_multi_plt_final:latest
-   ```
-
-2. **Inside the Container:**
-
-   ```bash
-   cd multi_lidar_ws/
-   colcon build --packages-select multi_lidar_calibration --symlink-install
-   . install/setup.bash
-   ros2 launch multi_lidar_calibration multi_lidar_calibration_ndt.launch.xml
-
-   or 
-
-   ros2 launch multi_lidar_calibration multi_lidar_calibration_icp.launch.xml
-   ```
-
----
-
-
-### Terminal 5: Run Odometry Node (KISS-ICP)
+### Terminal 4: Run Odometry Node (KISS-ICP)
 
 1. **Start a Container for the Odometry Node:**
 
@@ -144,18 +121,43 @@ The following instructions apply to Linux and macOS. The same commands will work
 
    ```bash
    cd kiss_icp_ws/
-   colcon build --packages-select kiss_icp --symlink-install
+   # colcon build --packages-select kiss_icp --symlink-install
    . install/setup.bash
 
    ros2 launch kiss_icp odometry.launch.py topic:=/velodyne_points # check the rviz trajectory
-   ros2 launch kiss_icp odometry.launch.py topic:=/merged_points   # check the rviz trajectory
+   # and close this node 
    ```
-
+   ```bash
+   #ros2 launch kiss_icp odometry.launch.py topic:=/merged_points   # check the rviz trajectory
+   ```
 3. **Access the Odometry Interface:**
 
    Open a browser and go to:
    ```
    http://localhost:6080/vnc_auto.html
+   ```
+
+---
+---
+### Terminal 5: Multi Lidar Calibration Node
+
+1. **Run the Container & Build Workspace:**
+
+   ```bash
+   docker run -it --network rosnet -e DISPLAY=:0 -v "$(pwd):/workspace/" thinkautonomous/ros2_humble_multi_plt_final:latest
+   ```
+
+2. **Inside the Container:**
+
+   ```bash
+   cd multi_lidar_ws/
+  # colcon build --packages-select multi_lidar_calibration --symlink-install
+   . install/setup.bash
+   ros2 launch multi_lidar_calibration multi_lidar_calibration_ndt.launch.xml
+
+  # or 
+
+   # ros2 launch multi_lidar_calibration multi_lidar_calibration_icp.launch.xml
    ```
 
 ---
