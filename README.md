@@ -24,8 +24,13 @@ This guide details how to run a multi-container ROS 2 setup using Docker on Linu
 
 ## Pull the project docker image
 
+* If you're on an AMD architecture:
 ```bash
 docker pull thinkautonomous/ros2_humble_multi_plt_final:latest
+```
+* If you're on an ARM architecture:
+```bash
+docker pull thinkautonomous/ros2_humble_gto_arm:latest
 ```
 
 ## Create Docker Network
@@ -59,7 +64,8 @@ The following instructions apply to Linux and macOS. The same commands will work
    cd ros2_bags/dynamic_road03
     
    ros2 bag play --loop ros2bags.db3
-   ```
+   ```   
+Note: In some cases, you may need to launch a program like our LiDAR Registration code first. If so, just relaunch this one after Terminal 3.
 
 ---
 ### Terminal 2: Launch RViz
