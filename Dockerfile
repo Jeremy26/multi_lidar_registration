@@ -43,7 +43,7 @@ RUN ARCH=$(dpkg --print-architecture) && \
     fi
 
 # Install Python dependencies
-RUN pip install --no-cache-dir transforms3d "numpy<2" open3d "scikit-build-core<0.10" packaging
+RUN pip install --no-cache-dir transforms3d "numpy<2" open3d "scikit-build-core<0.10" packaging gdown
 
 # Clone and install kiss_icp with submodule initialization
 WORKDIR /workspace

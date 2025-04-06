@@ -15,7 +15,7 @@ This guide details how to run a multi-container ROS 2 setup using Docker on Linu
   - [Terminal 2: Launch RViz](#terminal-2-launch-rviz)
   - [Terminal 3: Lidar Calibration Node](#terminal-3-lidar-calibration-node)
   - [Terminal 4: Run Odometry Node (KISS-ICP)](#terminal-4-run-odometry-node-kiss-icp)
-  - [Terminal 5: Run off the shelf calibration Node with NDT/ICP ](#terminal-5-run-calibration-node-ndt-icp)
+  - [Terminal 5: Run off the shelf calibration Node with NDT/ICP(Optional) ](#terminal-5-run-calibration-node-ndt-icp)
 - [Accessing the VNC/noVNC Interface](#accessing-the-vncnovnc-interface)
 - [WSL2 Specific Instructions](#wsl2-specific-instructions)
 - [Troubleshooting](#troubleshooting)
@@ -26,7 +26,7 @@ This guide details how to run a multi-container ROS 2 setup using Docker on Linu
 
 * If you're on an AMD architecture:
 ```bash
-docker pull thinkautonomous/ros2_humble_multi_plt_final:latest
+docker pull thinkautonomous/ros2_humble_gto_amd:latest
 ```
 * If you're on an ARM architecture:
 ```bash
@@ -43,6 +43,7 @@ docker network create rosnet
 
 ---
 
+
 ## Running the Containers
 
 The following instructions apply to Linux and macOS. The same commands will work in WSL2 (see [WSL2 Specific Instructions](#wsl2-specific-instructions) below).
@@ -51,8 +52,13 @@ The following instructions apply to Linux and macOS. The same commands will work
 
 1. **Start a Container for ROS Bag Playback:**
 
+   ## WSL and Linux users
    ```bash
-   docker run -it --network rosnet -e DISPLAY=:0 -v "$(pwd):/workspace/" thinkautonomous/ros2_humble_multi_plt_final:latest
+   docker run -it --network rosnet -e DISPLAY=:0 -v "$(pwd):/workspace/" thinkautonomous/ros2_humble_gto_amd:latest
+   ```
+   ## MacOS users
+   ```bash
+   docker run -it --network rosnet -e DISPLAY=:0 -v "$(pwd):/workspace/" thinkautonomous/ros2_humble_gto_arm:latest
    ```
 
 2. **Inside the Container, Play the ROS Bag:**
@@ -72,10 +78,14 @@ Note: In some cases, you may need to launch a program like our LiDAR Registratio
 
 1. **Start a Container for RViz:**
 
+   ## WSL and Linux users
    ```bash
-   docker run -it --network rosnet -p 5901:5900 -p 6081:6080 -e DISPLAY=:0 -v "$(pwd):/workspace/" thinkautonomous/ros2_humble_multi_plt_final:latest
+   docker run -it --network rosnet -p 5901:5900 -p 6081:6080 -e DISPLAY=:0 -v "$(pwd):/workspace/" thinkautonomous/ros2_humble_gto_amd:latest
    ```
-
+   ## MacOS users
+   ```bash
+   docker run -it --network rosnet -p 5901:5900 -p 6081:6080 -e DISPLAY=:0 -v "$(pwd):/workspace/" thinkautonomous/ros2_humble_gto_arm:latest
+   ```
 2. **Inside the Container, Launch RViz:**
 
    ```bash
@@ -98,10 +108,14 @@ Note: In some cases, you may need to launch a program like our LiDAR Registratio
 
 1. **Run the Container & Build Workspace:**
 
+   ## WSL and Linux users
    ```bash
-   docker run -it --network rosnet -e DISPLAY=:0 -v "$(pwd):/workspace/" thinkautonomous/ros2_humble_multi_plt_final:latest
+   docker run -it --network rosnet -e DISPLAY=:0 -v "$(pwd):/workspace/" thinkautonomous/ros2_humble_gto_amd:latest
    ```
-
+   ## MacOS users
+   ```bash
+   docker run -it --network rosnet -e DISPLAY=:0 -v "$(pwd):/workspace/" thinkautonomous/ros2_humble_gto_arm:latest
+   ```
 2. **Inside the Container:**
 
    ```bash
@@ -119,18 +133,24 @@ Note: In some cases, you may need to launch a program like our LiDAR Registratio
 
 1. **Start a Container for the Odometry Node:**
 
+   ## WSL and Linux users
    ```bash
-   docker run -it --network rosnet -p 5900:5900 -p 6080:6080 -e DISPLAY=:0 -v "$(pwd):/workspace/" thinkautonomous/ros2_humble_multi_plt_final:latest
+   docker run -it --network rosnet -p 5900:5900 -p 6080:6080 -e DISPLAY=:0 -v "$(pwd):/workspace/" thinkautonomous/ros2_humble_gto_amd:latest
    ```
-
+   ## MacOS users
+   ```bash
+   docker run -it --network rosnet -p 5900:5900 -p 6080:6080 -e DISPLAY=:0 -v "$(pwd):/workspace/" thinkautonomous/ros2_humble_gto_arm:latest
+   ```
 2. **Inside the Container, Build and Launch:**
+
+After running the kiss_icp node for SLAM, you can see the localized position of the vehicle on /kiss/odometry topic and map on /kiss/local_map , but for that set the frame "odom_lidar"
 
    ```bash
    cd kiss_icp_ws/
    # colcon build --packages-select kiss_icp --symlink-install
    . install/setup.bash
 
-   ros2 launch kiss_icp odometry.launch.py topic:=/velodyne_points # check the rviz trajectory
+   ros2 launch kiss_icp odometry.launch.py topic:=/velodyne_points 
    # and close this node 
    ```
    ```bash
@@ -145,14 +165,20 @@ Note: In some cases, you may need to launch a program like our LiDAR Registratio
 
 ---
 ---
-### Terminal 5: Multi Lidar Calibration Node
+### Terminal 5: Multi Lidar Calibration Node(Optional)
+
+If you want to test the NDT(Normal Distribution Transform) for lidar calibration then you can use the off shelf following ros2 package.
 
 1. **Run the Container & Build Workspace:**
 
+   ## WSL and Linux users
    ```bash
-   docker run -it --network rosnet -e DISPLAY=:0 -v "$(pwd):/workspace/" thinkautonomous/ros2_humble_multi_plt_final:latest
+   docker run -it --network rosnet -e DISPLAY=:0 -v "$(pwd):/workspace/" thinkautonomous/ros2_humble_gto_amd:latest
    ```
-
+   ## MacOS users
+   ```bash
+   docker run -it --network rosnet -e DISPLAY=:0 -v "$(pwd):/workspace/" thinkautonomous/ros2_humble_gto_arm:latest
+   ```
 2. **Inside the Container:**
 
    ```bash
@@ -161,10 +187,6 @@ Note: In some cases, you may need to launch a program like our LiDAR Registratio
    . install/setup.bash
    ros2 launch multi_lidar_calibration multi_lidar_calibration_ndt.launch.xml
 
-   # or 
-
-   # ros2 launch multi_lidar_calibration multi_lidar_calibration_icp.launch.xml
-   ```
 
 ---
 

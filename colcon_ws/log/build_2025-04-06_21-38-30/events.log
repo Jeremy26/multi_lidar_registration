@@ -1,0 +1,149 @@
+[0.000000] (-) TimerEvent: {}
+[0.004272] (lidar_calibration) JobQueued: {'identifier': 'lidar_calibration', 'dependencies': OrderedDict()}
+[0.005167] (lidar_calibration) JobStarted: {'identifier': 'lidar_calibration'}
+[0.093129] (-) TimerEvent: {}
+[0.196167] (-) TimerEvent: {}
+[0.298071] (-) TimerEvent: {}
+[0.399368] (-) TimerEvent: {}
+[0.500775] (-) TimerEvent: {}
+[0.602280] (-) TimerEvent: {}
+[0.703820] (-) TimerEvent: {}
+[0.806366] (-) TimerEvent: {}
+[0.908379] (-) TimerEvent: {}
+[1.009694] (-) TimerEvent: {}
+[1.111027] (-) TimerEvent: {}
+[1.212292] (-) TimerEvent: {}
+[1.314186] (-) TimerEvent: {}
+[1.415575] (-) TimerEvent: {}
+[1.516831] (-) TimerEvent: {}
+[1.618251] (-) TimerEvent: {}
+[1.719539] (-) TimerEvent: {}
+[1.820724] (-) TimerEvent: {}
+[1.923274] (-) TimerEvent: {}
+[2.026402] (-) TimerEvent: {}
+[2.127510] (-) TimerEvent: {}
+[2.228948] (-) TimerEvent: {}
+[2.330109] (-) TimerEvent: {}
+[2.431576] (-) TimerEvent: {}
+[2.532944] (-) TimerEvent: {}
+[2.634228] (-) TimerEvent: {}
+[2.735749] (-) TimerEvent: {}
+[2.837035] (-) TimerEvent: {}
+[2.938453] (-) TimerEvent: {}
+[3.039877] (-) TimerEvent: {}
+[3.141359] (-) TimerEvent: {}
+[3.242970] (-) TimerEvent: {}
+[3.344242] (-) TimerEvent: {}
+[3.445797] (-) TimerEvent: {}
+[3.547163] (-) TimerEvent: {}
+[3.648633] (-) TimerEvent: {}
+[3.750074] (-) TimerEvent: {}
+[3.851347] (-) TimerEvent: {}
+[3.952598] (-) TimerEvent: {}
+[4.054229] (-) TimerEvent: {}
+[4.156117] (-) TimerEvent: {}
+[4.257794] (-) TimerEvent: {}
+[4.359408] (-) TimerEvent: {}
+[4.465343] (-) TimerEvent: {}
+[4.566774] (-) TimerEvent: {}
+[4.668332] (-) TimerEvent: {}
+[4.769583] (-) TimerEvent: {}
+[4.871114] (-) TimerEvent: {}
+[4.972611] (-) TimerEvent: {}
+[5.074066] (-) TimerEvent: {}
+[5.175303] (-) TimerEvent: {}
+[5.276570] (-) TimerEvent: {}
+[5.379505] (-) TimerEvent: {}
+[5.481120] (-) TimerEvent: {}
+[5.582430] (-) TimerEvent: {}
+[5.683615] (-) TimerEvent: {}
+[5.784881] (-) TimerEvent: {}
+[5.886237] (-) TimerEvent: {}
+[5.988000] (-) TimerEvent: {}
+[6.089513] (-) TimerEvent: {}
+[6.190990] (-) TimerEvent: {}
+[6.292377] (-) TimerEvent: {}
+[6.393654] (-) TimerEvent: {}
+[6.413539] (lidar_calibration) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/workspace/colcon_ws/build/lidar_calibration/build', '--no-deps', 'symlink_data'], 'cwd': '/workspace/colcon_ws/build/lidar_calibration', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'HOSTNAME': '28d51b2fa2f7', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/root', 'OLDPWD': '/workspace', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/workspace/colcon_ws/build/lidar_calibration', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/workspace/colcon_ws/build/lidar_calibration/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/colcon_ws/install/lidar_calibration/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[6.494846] (-) TimerEvent: {}
+[6.596188] (-) TimerEvent: {}
+[6.697672] (-) TimerEvent: {}
+[6.798985] (-) TimerEvent: {}
+[6.900219] (-) TimerEvent: {}
+[7.001324] (-) TimerEvent: {}
+[7.102718] (-) TimerEvent: {}
+[7.204763] (-) TimerEvent: {}
+[7.306096] (-) TimerEvent: {}
+[7.407265] (-) TimerEvent: {}
+[7.508608] (-) TimerEvent: {}
+[7.609904] (-) TimerEvent: {}
+[7.711363] (-) TimerEvent: {}
+[7.813385] (-) TimerEvent: {}
+[7.914957] (-) TimerEvent: {}
+[8.016140] (-) TimerEvent: {}
+[8.117629] (-) TimerEvent: {}
+[8.219028] (-) TimerEvent: {}
+[8.320404] (-) TimerEvent: {}
+[8.425773] (-) TimerEvent: {}
+[8.526926] (-) TimerEvent: {}
+[8.628085] (-) TimerEvent: {}
+[8.729381] (-) TimerEvent: {}
+[8.834607] (-) TimerEvent: {}
+[8.937693] (-) TimerEvent: {}
+[9.038820] (-) TimerEvent: {}
+[9.140356] (-) TimerEvent: {}
+[9.241491] (-) TimerEvent: {}
+[9.342804] (-) TimerEvent: {}
+[9.376359] (lidar_calibration) StdoutLine: {'line': b'running develop\n'}
+[9.442990] (-) TimerEvent: {}
+[9.544367] (-) TimerEvent: {}
+[9.645428] (-) TimerEvent: {}
+[9.746847] (-) TimerEvent: {}
+[9.848170] (-) TimerEvent: {}
+[9.949418] (-) TimerEvent: {}
+[10.051148] (-) TimerEvent: {}
+[10.118385] (lidar_calibration) StdoutLine: {'line': b'running egg_info\n'}
+[10.121389] (lidar_calibration) StdoutLine: {'line': b'creating lidar_calibration.egg-info\n'}
+[10.124947] (lidar_calibration) StdoutLine: {'line': b'writing lidar_calibration.egg-info/PKG-INFO\n'}
+[10.144947] (lidar_calibration) StdoutLine: {'line': b'writing dependency_links to lidar_calibration.egg-info/dependency_links.txt\n'}
+[10.151348] (-) TimerEvent: {}
+[10.156939] (lidar_calibration) StdoutLine: {'line': b'writing entry points to lidar_calibration.egg-info/entry_points.txt\n'}
+[10.167078] (lidar_calibration) StdoutLine: {'line': b'writing requirements to lidar_calibration.egg-info/requires.txt\n'}
+[10.176634] (lidar_calibration) StdoutLine: {'line': b'writing top-level names to lidar_calibration.egg-info/top_level.txt\n'}
+[10.214671] (lidar_calibration) StdoutLine: {'line': b"writing manifest file 'lidar_calibration.egg-info/SOURCES.txt'\n"}
+[10.251588] (-) TimerEvent: {}
+[10.353031] (-) TimerEvent: {}
+[10.378124] (lidar_calibration) StdoutLine: {'line': b"reading manifest file 'lidar_calibration.egg-info/SOURCES.txt'\n"}
+[10.453297] (-) TimerEvent: {}
+[10.549905] (lidar_calibration) StdoutLine: {'line': b"writing manifest file 'lidar_calibration.egg-info/SOURCES.txt'\n"}
+[10.553546] (-) TimerEvent: {}
+[10.593011] (lidar_calibration) StdoutLine: {'line': b'running build_ext\n'}
+[10.597594] (lidar_calibration) StdoutLine: {'line': b'Creating /workspace/colcon_ws/install/lidar_calibration/lib/python3.10/site-packages/lidar-calibration.egg-link (link to .)\n'}
+[10.653872] (-) TimerEvent: {}
+[10.671395] (lidar_calibration) StdoutLine: {'line': b'Installing lidar_calibration_node script to /workspace/colcon_ws/install/lidar_calibration/lib/lidar_calibration\n'}
+[10.721058] (lidar_calibration) StdoutLine: {'line': b'Installing uncalibrated_node script to /workspace/colcon_ws/install/lidar_calibration/lib/lidar_calibration\n'}
+[10.754143] (-) TimerEvent: {}
+[10.790700] (lidar_calibration) StdoutLine: {'line': b'\n'}
+[10.794099] (lidar_calibration) StdoutLine: {'line': b'Installed /workspace/colcon_ws/build/lidar_calibration\n'}
+[10.802566] (lidar_calibration) StdoutLine: {'line': b'running symlink_data\n'}
+[10.829599] (lidar_calibration) StdoutLine: {'line': b'creating /workspace/colcon_ws/install/lidar_calibration/share/ament_index\n'}
+[10.837007] (lidar_calibration) StdoutLine: {'line': b'creating /workspace/colcon_ws/install/lidar_calibration/share/ament_index/resource_index\n'}
+[10.845913] (lidar_calibration) StdoutLine: {'line': b'creating /workspace/colcon_ws/install/lidar_calibration/share/ament_index/resource_index/packages\n'}
+[10.854438] (-) TimerEvent: {}
+[10.901304] (lidar_calibration) StdoutLine: {'line': b'symbolically linking /workspace/colcon_ws/build/lidar_calibration/resource/lidar_calibration -> /workspace/colcon_ws/install/lidar_calibration/share/ament_index/resource_index/packages\n'}
+[10.954751] (-) TimerEvent: {}
+[10.963149] (lidar_calibration) StdoutLine: {'line': b'symbolically linking /workspace/colcon_ws/build/lidar_calibration/package.xml -> /workspace/colcon_ws/install/lidar_calibration/share/lidar_calibration\n'}
+[11.055006] (-) TimerEvent: {}
+[11.074183] (lidar_calibration) CommandEnded: {'returncode': 0}
+[11.155244] (-) TimerEvent: {}
+[11.256517] (-) TimerEvent: {}
+[11.357900] (-) TimerEvent: {}
+[11.461457] (-) TimerEvent: {}
+[11.562571] (-) TimerEvent: {}
+[11.663749] (-) TimerEvent: {}
+[11.764992] (-) TimerEvent: {}
+[11.866069] (-) TimerEvent: {}
+[11.967500] (-) TimerEvent: {}
+[12.068922] (-) TimerEvent: {}
+[12.076299] (lidar_calibration) JobEnded: {'identifier': 'lidar_calibration', 'rc': 0}
+[12.105136] (-) EventReactorShutdown: {}
