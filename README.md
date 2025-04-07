@@ -229,17 +229,23 @@ If you want to test the NDT(Normal Distribution Transform) for lidar calibration
 ---
 ## Output:
 ![Alt text](images/without_registration.jpg)
+
 **This is the point cloud by merging the point cloud from velodyne(green) and Ouster 1 lidar, without registration or alignment.**
 ![Alt text](images/icp.jpg)
+
 **This is a primary version of the merged point cloud with standard point to plane ICP method from Open3D**
 ![Alt text](images/multi_scale_GICP_ICP1.jpg)
 ![Alt text](images/multi_scale_GICP_ICP2.jpg)
+
 **This is a final version of the merged point cloud with standard point to plane GICP followed by ICP method from Open3D with multi scaled approached to get the better alignment.**
+
 ![Alt text](images/ros_output.png)
+
 **This is the output from rviz when we achieve the point cloud registration using the fast global registration for global registration, followed by Generalized ICP and ICP with multi scaled approach for the refined registration between OS1 and velodyne lidars in velodyne frame.**
 
 
 ![Alt text](images/slam_kiss_icp.gif)
+
 **This is the output for the SLAM using kiss_icp alogorithm operating on registered point clouds fom velodyne and os1, showing the localized actor trajectory and local map.**
 
 
