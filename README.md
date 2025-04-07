@@ -94,7 +94,7 @@ Note: In some cases, you may need to launch a program like our LiDAR Registratio
 
 3. **Access via Browser:**
 
-   Open a web browser and navigate to:
+   Open a web browser and navigate to: and switch the base frame **from "map" to "velodyne"**
 
    ```
    http://localhost:6081/vnc_auto.html
@@ -143,7 +143,7 @@ Note: In some cases, you may need to launch a program like our LiDAR Registratio
    ```
 2. **Inside the Container, Build and Launch:**
 
-After running the kiss_icp node for SLAM, you can see the localized position of the vehicle on /kiss/odometry topic and map on /kiss/local_map , but for that set the frame "odom_lidar"
+After running the kiss_icp node **for SLAM, you can see the localized position of the vehicle on /kiss/odometry topic and map on /kiss/local_map , but for that set the frame "odom_lidar"**
 
    ```bash
    cd kiss_icp_ws/
