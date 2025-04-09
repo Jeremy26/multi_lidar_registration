@@ -16,8 +16,8 @@ class LidarCalibrator(Node):
     def __init__(self):
         super().__init__('lidar_calibration_node')
 
-        self.scales = [4.0, 2.0, 0.5, 0.2, 0.05]
-        self.thresholds = [4.0, 2.0, 0.5, 0.2, 0.05]
+        self.scales = #TODO
+        self.thresholds = #TODO
         self.time_slop = 0.1
         self.icp_max_correspondence_distance = 0.05
         self.gicp_max_correspondence_distance = 0.5
@@ -36,7 +36,7 @@ class LidarCalibrator(Node):
                 [0, 0, 0, 1]
             ])      
         else:
-            self.current_transformation = np.eye(4)
+            self.current_transformation = #TODO
 
         
         self.declare_parameter('os1_transform_fixed', False)
@@ -50,10 +50,10 @@ class LidarCalibrator(Node):
                 [0, 0, 0, 1]
             ])      
         else:
-            self.final_transform_os1 = np.eye(4)
+            self.final_transform_os1 = #TODO
 
         # Added variables for early stopping
-        self.rmse_threshold = 0.027  # Adjust it as needed
+        self.rmse_threshold = #TODO  # Adjust it as needed
         self.transform_os1_counter = 0  # A counter for the number of frames the transform is used
         self.max_iterations = 5  # maximum number of iterations, prevent infinite loops
 
@@ -90,23 +90,20 @@ class LidarCalibrator(Node):
             self.get_logger().warn("Empty point cloud detected during preprocessing. Skipping...")
             return pcd
 
-        pcd_down = pcd.voxel_down_sample(voxel_size)
-        pcd_down.estimate_normals(
-            o3d.geometry.KDTreeSearchParamHybrid(radius=voxel_size * 2, max_nn=30))
-        pcd_down, _ = pcd_down.remove_statistical_outlier(nb_neighbors=20, std_ratio=2.0)
+        pcd_down = #TODO: Downsample
+        #TODO: Estimate Normals
+        #TODO: Remove Outliers
         return pcd_down
 
     def preprocess_point_cloud_fgr(self, pcd, voxel_size):
         self.get_logger().info(":: Downsample with a voxel size %.3f." % voxel_size)
-        pcd_down = pcd.voxel_down_sample(voxel_size)
+        pcd_down = ##TODO: Downsample
         radius_normal = voxel_size * 2
         self.get_logger().info(":: Estimate normal with search radius %.3f." % radius_normal)
         pcd_down.estimate_normals(o3d.geometry.KDTreeSearchParamHybrid(radius=radius_normal, max_nn=30))
         radius_feature = voxel_size * 5
         self.get_logger().info(":: Compute FPFH feature with search radius %.3f." % radius_feature)
-        pcd_fpfh = o3d.pipelines.registration.compute_fpfh_feature(
-            pcd_down,
-            o3d.geometry.KDTreeSearchParamHybrid(radius=radius_feature, max_nn=100))
+        pcd_fpfh = #TODO: Compute FPFH Features
         return pcd_down, pcd_fpfh
 
     def fast_global_registration(self, source, target, voxel_size):
@@ -116,55 +113,44 @@ class LidarCalibrator(Node):
             self.get_logger().warn("Empty point cloud detected in fast global registration.")
             return np.eye(4)
         distance_threshold = voxel_size * 0.5
-        result = o3d.pipelines.registration.registration_fgr_based_on_feature_matching(
-            source_down, target_down, source_fpfh, target_fpfh,
-            o3d.pipelines.registration.FastGlobalRegistrationOption(
-                maximum_correspondence_distance=distance_threshold))
+        result = #TODO: Run FGR
         return result.transformation
 
     def register_gicp(self, source, target, init_transformation=np.eye(4)):
         try:
-            gicp = o3d.pipelines.registration.registration_generalized_icp(
-                source, target, self.gicp_max_correspondence_distance, init_transformation,
-                o3d.pipelines.registration.TransformationEstimationForGeneralizedICP(),
-                o3d.pipelines.registration.ICPConvergenceCriteria(max_iteration=500)
-            )
-            return gicp.transformation
+            gicp = #TODO: GICP
+            return #TODO: 
         except Exception as e:
             self.get_logger().error(f"GICP registration failed: {e}")
             return None
 
     def register_icp(self, source, target, init_transformation=np.eye(4)):
-        icp = o3d.pipelines.registration.registration_icp(
-            source, target, self.icp_max_correspondence_distance, init_transformation,
-            o3d.pipelines.registration.TransformationEstimationPointToPlane(),
-            o3d.pipelines.registration.ICPConvergenceCriteria(max_iteration=200)
-        )
-        return icp
+        icp = #TODO: ICP
+        return #TODO
 
     def multi_scale_registration(self, source, target):
-        init_transformation = self.fast_global_registration(source, target, voxel_size=0.5)
+        init_transformation = #TODO: FGR
         current_transformation = init_transformation
         previous_rmse = float('inf')
 
         for iteration in range(self.max_iterations):
             for voxel_size in self.scales:
-                source_down = self.preprocess_point_cloud(source, voxel_size)
-                target_down = self.preprocess_point_cloud(target, voxel_size)
+                source_down = #TODO: Preprocess
+                target_down = #TODO: Preprocess
 
                 if len(source_down.points) == 0 or len(target_down.points) == 0:
                     self.get_logger().warn("Skipping registration due to empty downsampled point cloud.")
                     return current_transformation, previous_rmse  # Return the last valid values
 
-                gicp_transformation = self.register_gicp(source_down, target_down, current_transformation)
+                gicp_transformation = #TODO: GICP
 
                 if gicp_transformation is None:
                     self.get_logger().warn("GICP failed, skipping this scale.")
                     return current_transformation, previous_rmse # Return the last valid values
 
-                icp_result = self.register_icp(source_down, target_down, gicp_transformation)
+                icp_result = #TODO: ICP
 
-                current_transformation = icp_result.transformation
+                current_transformation = #TODO: ICP.Transform
                 self.get_logger().info("Multi-scale registration done at voxel size: {}".format(voxel_size))
             
             #calculate the inlier_rmse score from the full point clouds and transformations
@@ -219,12 +205,12 @@ class LidarCalibrator(Node):
     def sync_callback(self, velodyne_msg, os1_msg):
         self.get_logger().info("Received synchronized messages")
 
-        velodyne_pcd = self.process_pc(velodyne_msg, [0, 1, 0])
-        os1_pcd = self.process_pc(os1_msg, [0, 0, 1])
+        velodyne_pcd = #TODO: Process
+        os1_pcd = #TODO: Process
 
         # OS1 Registration with early stopping
         if not self.os1_transform_fixed:
-            self.transform_os1, rmse_os1 = self.multi_scale_registration(os1_pcd, velodyne_pcd)
+            self.transform_os1, rmse_os1 = #TODO: MultiScale Registration
 
             if rmse_os1 is not None and rmse_os1 < self.rmse_threshold and rmse_os1 !=0:
                 self.get_logger().info(f"OS1 registration might be converged, RMSE: {rmse_os1:.8f}")
@@ -243,11 +229,11 @@ class LidarCalibrator(Node):
             self.get_logger().warn("Skipping merge and publish due to failed registration.")
             return
 
-        os1_pcd.transform(self.transform_os1)  # apply transformation to the pointcloud
+        #TODO: apply transformation to the pointcloud
         self.get_logger().info(f"OS1 transformation is converged for {self.transform_os1}")
         self.publish_transform(self.transform_os1, "os1", "velodyne")  # publish transform
 
-        merged_pcd = velodyne_pcd + os1_pcd
+        merged_pcd = #TODO: Merge
         merged_pcd_down = merged_pcd.voxel_down_sample(0.02)
 
         header = Header()
